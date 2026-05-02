@@ -34,6 +34,13 @@
                     <img src="img/Logo_NutriFit_Systems_.webp" alt="NutriFit Systems Logo" class="img-logo">
                 </a>
             </div>
+            <div class="menu-movil">
+                <div class="contenedor-lineas-menu">
+                    <span class="linea-menu linea-menu1"></span>
+                    <span class="linea-menu linea-menu2"></span>
+                    <span class="linea-menu linea-menu3"></span>
+                </div>
+            </div>
             <div class="grupo-derecho-navegacion">
                 <ul class="menu-navegacion">
                     <li><a href="#problem" class="enlace-navegacion">Problema</a></li>
@@ -76,7 +83,7 @@
                 </div>
             </div>
         </section>
-        <!-- SECCIÓN: CARACTERÍSTICAS (CARROUSEL) -->
+        <!-- SECCIÓN: CARACTERÍSTICAS -->
         <section class="contenedor-carrusel-caracteristicas" id="caracteristicas">
             <div class="pista-carrusel">
                 <!-- Bloque Original -->
@@ -169,7 +176,7 @@
             </div>
         </section>
         <!-- SECCIÓN: SOLUCIÓN -->
-        <section class="seccion-solucion" id="solution">
+        <section class="seccion-solucion container-alternos" id="solution">
             <div class="contenedor-solucion container">
                 <!-- Columna Izquierda: Texto Principal y Perfiles -->
                 <div class="parte-izquierda-solucion">
@@ -343,7 +350,7 @@
         </section>
 
         <!-- SECCIÓN: PROCESO (CÓMO FUNCIONA) -->
-        <section class="seccion-proceso" id="proceso">
+        <section class="seccion-proceso container-alternos" id="proceso">
             <div class="container">
                 <!-- Encabezado de la sección -->
                 <div class="encabezado-seccion text-center">
@@ -601,7 +608,7 @@
         </section>
 
         <!-- SECCIÓN: PRECIOS -->
-        <section class="seccion-precios" id="precios">
+        <section class="seccion-precios container-alternos" id="precios">
             <div class="container-precios container">
                 <div class="encabezado-seccion text-center">
                     <span class="etiqueta-seccion">PLANES</span>
@@ -622,7 +629,7 @@
                     <div class="panel-precio" id="panel-precio-usuario">
                         <div class="grid-precios">
                             <!-- Plan Básico Usuario -->
-                            <div class="tarjeta-precio">
+                            <article class="tarjeta-precio">
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan Básico</h3>
                                     <div class="precio-plan">
@@ -635,10 +642,10 @@
                                     <li><i class="ri-checkbox-circle-line"></i> Registro de peso</li>
                                 </ul>
                                 <a href="#" class="btn-esquema btn-plan">Empezar Gratis</a>
-                            </div>
+                            </article>
 
                             <!-- Plan Pro Usuario -->
-                            <div class="tarjeta-precio destacado">
+                            <article class="tarjeta-precio destacado">
                                 <span class="etiqueta-destacado">RECOMENDADO</span>
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan Pro</h3>
@@ -653,10 +660,10 @@
                                     <li><i class="ri-checkbox-circle-line"></i> Gráficas avanzadas</li>
                                 </ul>
                                 <a href="#" class="btn-esquema btn-plan-pro">Elegir Plan</a>
-                            </div>
+                            </article>
 
                             <!-- Plan PremiumFit Usuario -->
-                            <div class="tarjeta-precio">
+                            <article class="tarjeta-precio">
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan PremiumFit</h3>
                                     <div class="precio-plan">
@@ -669,7 +676,7 @@
                                     <li><i class="ri-checkbox-circle-line"></i> Soporte prioritario</li>
                                 </ul>
                                 <a href="#" class="btn-esquema btn-plan">Elegir Plan</a>
-                            </div>
+                            </article>
                         </div>
                     </div>
 
@@ -677,7 +684,7 @@
                     <div class="panel-precio oculto" id="panel-precio-profesional">
                         <div class="grid-precios">
                             <!-- Plan Básico Profesional -->
-                            <div class="tarjeta-precio">
+                            <article class="tarjeta-precio">
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan Básico</h3>
                                     <div class="precio-plan">
@@ -689,11 +696,11 @@
                                     <li><i class="ri-checkbox-circle-line"></i> Gestión manual</li>
                                     <li><i class="ri-checkbox-circle-line"></i> Historial básico</li>
                                 </ul>
-                                <a href="#" class="btn-esquema">Elegir Plan</a>
-                            </div>
+                                <a href="#" class="btn-esquema btn-plan">Elegir Plan</a>
+                            </article>
 
                             <!-- Plan NutriFit Pro Profesional -->
-                            <div class="tarjeta-precio destacado">
+                            <article class="tarjeta-precio destacado">
                                 <span class="etiqueta-destacado">MÁS POPULAR</span>
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">NutriFit Pro</h3>
@@ -707,11 +714,11 @@
                                     <li><i class="ri-checkbox-circle-line"></i> Creación dietas asistida IA</li>
                                     <li><i class="ri-checkbox-circle-line"></i> Subida de analíticas</li>
                                 </ul>
-                                <a href="#" class="btn-primario">Elegir Plan</a>
-                            </div>
+                                <a href="#" class="btn-esquema btn-plan-pro">Elegir Plan</a>
+                            </article>
 
                             <!-- Plan Experto Profesional -->
-                            <div class="tarjeta-precio">
+                            <article class="tarjeta-precio">
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan Experto</h3>
                                     <div class="precio-plan">
@@ -723,19 +730,222 @@
                                     <li><i class="ri-checkbox-circle-line"></i> IA integrada ilimitada</li>
                                     <li><i class="ri-checkbox-circle-line"></i> Marca blanca (Personalizado)</li>
                                 </ul>
-                                <a href="#" class="btn-esquema">Elegir Plan</a>
-                            </div>
+                                <a href="#" class="btn-esquema btn-plan">Elegir Plan</a>
+                            </article>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
+        <!-- SECCIÓN: FAQ (Preguntas Frecuentes) -->
+        <section class="seccion-faq" id="faq">
+            <div class="container-faq container">
+                <div class="encabezado-seccion text-center">
+                    <span class="etiqueta-seccion">SOPORTE</span>
+                    <h2 class="titulo-faq">Preguntas Frecuentes</h2>
+                    <p class="texto-faq">Resolvemos tus dudas principales sobre NutriFit Systems.</p>
+                </div>
+
+                <div class="grid-faq">
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Sirve si no soy profesional?</h4>
+                            <div class="icono-faq icono-faq-cerrar">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">Sí, puedes usar la app como usuario para hacer tu propio seguimiento
+                            sin necesidad de entrenador.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Puedo usarla si ya tengo un nutricionista o entrenador?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">Sí. Podrás conectarte con tu profesional y seguir tus planes
+                            directamente desde la app.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Es seguro para datos médicos?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">Sí. Cumplimos el RGPD con datos 100% encriptados para tu total
+                            tranquilidad.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Hay permanencia?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">No. Cancela tu suscripción mensual con un solo clic desde tu perfil en
+                            cualquier momento.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Puedo cambiar de plan en cualquier momento?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">Sí. Puedes subir o bajar de plan cuando quieras según tus necesidades
+                            actuales.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Pierdo mis datos si cancelo?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">No. Tus datos se mantienen guardados de forma segura para que puedas
+                            retomarlos cuando vuelvas.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Funciona en móvil y ordenador?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">Sí. Puedes acceder desde tu móvil, tablet o navegador sin perder la
+                            sincronización de tus datos.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Necesito conocimientos previos?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">No. La app está diseñada para que cualquier persona pueda usarla
+                            fácilmente desde el primer día.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿La IA sustituye a un profesional?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">No. La IA es un potente apoyo para mejorar decisiones, pero no
+                            reemplaza el asesoramiento profesional.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Cuántos clientes puedo gestionar?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">Depende del plan. Desde un número limitado en el básico hasta clientes
+                            ilimitados en planes superiores.</p>
+                    </article>
+
+                    <article class="item-faq">
+                        <div class="pregunta-header">
+                            <h4 class="pregunta-faq">¿Puedo subir analíticas o documentos?</h4>
+                            <div class="icono-faq">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="respuesta-faq">Sí. Puedes subir archivos en PDF o imágenes para tener toda su
+                            información centralizada.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CTA FINAL -->
+        <section class="seccion-cta-final container-alternos">
+            <div class="container-cta container">
+                <div class="contenido-cta text-center">
+                    <h2 class="titulo-cta">Pásate a la nutrición inteligente.</h2>
+                    <p class="texto-cta">Deja atrás los procesos manuales y ahorra tiempo hoy.</p>
+                    <div class="grupo-botones-cta">
+                        <a href="#" class="btn-cta-final">Reservar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
-    <script src="javascript.js"></script>
 
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="grid-footer">
+
+                <div class="col-footer col-bio">
+                    <a href="#" class="logo-footer">
+                        <img src="img/Logo_NutriFit_Systems_.webp" alt="NutriFit Logo" class="logo-img">
+                    </a>
+                    <p class="descripcion-footer">Transformando la nutrición y el entrenamiento con tecnología
+                        inteligente y humana.</p>
+                    <div class="redes-sociales">
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="col-footer">
+                    <h4 class="titulo-col-footer">Producto</h4>
+                    <ul class="enlaces-footer">
+                        <li><a href="#solution">La Solución</a></li>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#proceso">Cómo funciona</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-footer">
+                    <h4 class="titulo-col-footer">Legal</h4>
+                    <ul class="enlaces-footer">
+                        <li><a href="politica-de-privacidad.html">Privacidad</a></li>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Parte inferior: Copyright -->
+            <div class="footer-abajo">
+                <p>&copy; 2026 NutriFit Systems. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Esto trae las funciones de Lenis a tu web -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <script src="javascript.js"></script>
 </body>
 
 </html>

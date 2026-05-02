@@ -19,7 +19,7 @@
     --ff-heading: 'Outfit', sans-serif;
     --ff-body: 'Nunito Sans', sans-serif;
 
-    /* Tamaños de Fuente (Escala para PC por defecto) */
+    /* Tamaños de Fuente */
     --fs-h1: 3rem;
     --fs-h2: 2rem;
     --fs-h3: 1.5rem;
@@ -29,7 +29,7 @@
     --fs-a: 0.8rem;
     --fs-span: 0.9rem;
 
-    /* Sistema de espaciado relativo (Basado en rem para escalabilidad) */
+    /* espacioados reutilizables */
     --space-1: 0.5rem;
     --space-2: 1rem;
     --space-3: 1.5rem;
@@ -37,7 +37,7 @@
     --space-6: 3rem;
     --space-8: 6rem;
 
-    /* Sombras Elevadas */
+    /* Sombras */
     --shadow-sm: 0 2px 4px rgba(26, 54, 34, 0.05);
     --shadow-md: 0 4px 12px rgba(26, 54, 34, 0.08);
     --shadow-lg: 0 10px 25px rgba(26, 54, 34, 0.12);
@@ -68,7 +68,7 @@
     }
 }
 
-/* RESETEO Y ESTILOS BASE (Afecta a todo el documento y elementos generales) */
+/* RESETEO Y ESTILOS BASE */
 * {
     margin: 0;
     padding: 0;
@@ -161,7 +161,7 @@ img {
 .btn-secundario,
 .btn-esquema {
     padding: 0.8em 1.6em;
-    border-radius: 3.125em;
+    border-radius: 15px;
     font-weight: 600;
     display: inline-block;
     cursor: pointer;
@@ -209,6 +209,7 @@ img {
     overflow: hidden;
 }
 
+/* efecto de que como que se rellena el boton por dentro*/
 .btn-esquema::after {
     content: "";
     position: absolute;
@@ -218,7 +219,7 @@ img {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    border-radius: 20px;
+    border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -227,6 +228,7 @@ img {
     z-index: 5;
 }
 
+/* para que se active el after al hacer hover*/
 .btn-esquema:hover:after {
     z-index: -1;
     width: 100%;
@@ -247,7 +249,6 @@ img {
 }
 
 /* NAVEGACIÓN */
-
 /* Contenedor fijo que mantiene la barra de navegación arriba */
 .contenedor-cabecera {
     position: fixed;
@@ -258,7 +259,7 @@ img {
     padding: var(--space-2) 5%;
 }
 
-/* La barra de navegación flotante con efecto cristal */
+/* barra de navegación con fondo borrroso */
 .contenedor-navegacion {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
@@ -279,7 +280,7 @@ img {
     width: auto;
 }
 
-/* Grupo que alinea el menú y los botones a la derecha */
+/* contenedor que tiene los botones y los enlaces de navegación */
 .grupo-derecho-navegacion {
     display: flex;
     align-items: center;
@@ -397,13 +398,7 @@ img {
     position: relative;
 }
 
-/* Wrapper para posicionamiento relativo de las tarjetas sobre la imagen */
-.envoltura-imagen-hero {
-    position: relative;
-    border-radius: 1.25rem;
-}
-
-/* Estilos de la imagen principal del dashboard */
+/* Estilos de la imagen principal */
 .img-hero {
     width: 100%;
     height: auto;
@@ -413,19 +408,20 @@ img {
     display: none;
 }
 
-/* SECCIÓN: CARACTERÍSTICAS (CARRUSEL INFINITO) */
+/* SECCIÓN: CARACTERÍSTICAS */
 
-/* Contenedor principal del carrusel con fondo verde y recorte de contenido */
+/* Contenedor principal del carrusel con fondo verde */
 .contenedor-carrusel-caracteristicas {
     background-color: var(--clr-primary);
     padding: var(--space-3) 0;
     overflow: hidden;
+    /* evito que desborde por los lados */
     position: relative;
     display: flex;
     align-items: center;
 }
 
-/* Sombras negras en los extremos para efecto de desvanecimiento */
+/* Sombras negras en los extremos */
 .contenedor-carrusel-caracteristicas::before,
 .contenedor-carrusel-caracteristicas::after {
     content: '';
@@ -499,7 +495,7 @@ img {
     margin: 0 auto var(--space-4);
 }
 
-/* Etiqueta pequeña sobre el título H2 */
+/* span sobre el título H2 */
 .etiqueta-seccion {
     display: inline-block;
     color: var(--clr-primary);
@@ -509,7 +505,7 @@ img {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-bottom: var(--space-2);
-    padding: 0.2rem 0.8rem;
+    padding: 10px 20px;
     background-color: var(--clr-bg-sec);
     border-radius: 10px;
 }
@@ -545,23 +541,22 @@ img {
 .tarjeta-problema {
     background-color: var(--clr-white);
     padding: var(--space-4);
-    border-radius: 1.25rem;
+    border-radius: 15px;
     border: 1px solid rgba(129, 199, 132, 0.1);
     box-shadow: var(--shadow-sm);
     transition: var(--transition-smooth);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 /* Efecto hover en las tarjetas: elevación y sombra más profunda */
 .tarjeta-problema:hover {
-    transform: translateY(-0.5rem);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
     border-color: var(--clr-accent-soft);
 }
 
-/* Caja contenedora del icono dentro de la tarjeta */
+/* caja de los iconos */
 .div-icono-tarjeta {
     width: 3rem;
     height: 3rem;
@@ -576,21 +571,20 @@ img {
     transition: var(--transition-fast);
 }
 
-/* El icono rota levemente al hacer hover en la tarjeta */
 .tarjeta-problema:hover .div-icono-tarjeta {
     background-color: var(--clr-primary);
     color: var(--clr-white);
     transform: rotate(-5deg);
 }
 
-/* Título interno H3 de la tarjeta */
+/* Título  H3 de cada tarjeta */
 .titulo-tarjeta {
     font-size: var(--fs-h4);
     margin-bottom: var(--space-1);
     color: var(--clr-text);
 }
 
-/* Descripción del problema dentro de la tarjeta */
+/* descripción  */
 .descripcion-tarjeta {
     font-size: var(--fs-p);
     opacity: 0.8;
@@ -612,7 +606,7 @@ img {
     align-items: start;
 }
 
-/* Columna izquierda: Se mantiene fija al hacer scroll (Sticky) */
+/* estilos a la columan de la izquierda que se queda sticky */
 .parte-izquierda-solucion {
     position: sticky;
     top: var(--space-8);
@@ -654,7 +648,7 @@ img {
     box-shadow: var(--shadow-sm);
 }
 
-/* Reutilización y ajuste del box de iconos para la solución */
+/* estilos al div del icono de la seccion solucion y de la de beneficios */
 .item-caracteristica-solucion .div-icono-caracteristica,
 .fila-beneficio .div-icono-beneficio {
     width: 3.5rem;
@@ -664,9 +658,10 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 1rem;
+    border-radius: 15px;
     font-size: 1.6rem;
     flex-shrink: 0;
+    /* para que no se encoja */
     transition: var(--transition-smooth);
 }
 
@@ -692,7 +687,6 @@ img {
 }
 
 /* hover de la desxripcion al pasar el cursor por el div */
-
 .item-caracteristica-solucion:hover .descripcion-caracteristica {
     opacity: 1;
 }
@@ -736,10 +730,10 @@ img {
 /* estilos al span de el header de la seccion de beneficios*/
 .encabezado-beneficio .etiqueta-seccion {
     width: fit-content;
+    /* tiene de ancho lo que ocupe el contenido */
     margin-left: auto;
     /* para alineacion a la derecha */
 }
-
 
 /* estilos al numero que esta sticky */
 .sticky-number-wrapper {
@@ -779,6 +773,7 @@ img {
     border-radius: 1.25rem;
 }
 
+/* estilos para que se vayan acumulando como tarjetas y se forme como una baraja */
 .fila-beneficio:nth-child(1) {
     top: 160px;
 }
@@ -1055,21 +1050,15 @@ img {
     }
 }
 
-/* Ajustes responsivos para tablets */
-@media (max-width: 1024px) {
-    .hero-content {
-        gap: var(--space-4);
-    }
-}
 
 /* SECCIÓN: PRECIOS */
 
 .seccion-precios {
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .panel-precio {
-    margin: 5% 0;
+    margin: 10% 0 0 0;
 }
 
 /* grid de las 3 tarjetas de precio */
@@ -1157,9 +1146,249 @@ img {
     font-style: italic;
 }
 
+/* SECCIÓN FAQ */
+
+.seccion-faq {
+    padding: 4rem 0;
+    background-color: var(--clr-background-light);
+}
+
+/* estilo al contenedor que tiene todas las preguntas*/
+.grid-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem auto;
+    width: 80%;
+}
+
+/* contenedor que tiene la pregunta y la respuesta*/
+.item-faq {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--clr-accent-soft);
+    transition: var(--transition-smooth);
+}
+
+.item-faq:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+/* contenedor que tiene la pregunta y el icono */
+.pregunta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* estilo al icono */
+.icono-faq {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    color: var(--clr-primary);
+}
+
+/* Estilo común para ambos palitos */
+.icono-faq span {
+    display: block;
+    background-color: var(--clr-primary);
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+/* Palito vertical */
+.icono-faq span:first-of-type {
+    border-radius: 20px;
+    transform: translateY(-50%) translateX(-50%);
+    width: 3px;
+    height: 100%;
+}
+
+/* Palito horizontal */
+.icono-faq span:last-of-type {
+    border-radius: 20px;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    height: 3px;
+}
+
+/* estilos a la pregunta (h3) */
+.pregunta-faq {
+    font-size: 1.25rem;
+    color: var(--clr-primary-dark);
+}
+
+/* estilos a las respuestas*/
+.respuesta-faq {
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    font-size: 1rem;
+    color: var(--clr-text-muted);
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* estilos a las respuestas cuando esten vsidibles*/
+.respuesta-faq.respuesta-visible {
+    opacity: 1;
+    margin: 2% 0 0;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+/* icono X */
+.icono-faq-cerrar span:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icono-faq-cerrar span:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* UTILIDADES DE FONDO */
+.container-alternos {
+    background-color: var(--clr-bg-sec);
+}
+
+/* SECCIÓN: CTA FINAL */
+.seccion-cta-final {
+    padding: 6rem 0;
+    background-color: var(--clr-bg-sec);
+    /* El verde muy suave que definimos al inicio */
+}
+
+.contenido-cta {
+    border-radius: 25px;
+    background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-accent-soft) 100%);
+    box-shadow: var(--shadow-lg);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.titulo-cta {
+    font-size: var(--fs-h1);
+    color: var(--clr-white);
+    margin-bottom: 1.5rem;
+}
+
+.texto-cta {
+    font-size: 1.3rem;
+    color: var(--clr-white);
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.grupo-botones-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-cta-final {
+    color: var(--clr-primary);
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--clr-text);
+    color: white;
+    padding: 5rem 0 2rem;
+    margin-top: 5rem;
+}
+
+/* estilos a las columnas del footer */
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+/* estilos al logo */
+.logo-img {
+    width: 35%;
+}
+
+.descripcion-footer {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin-bottom: 1.5rem;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-sociales a {
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    transition: var(--transition-fast);
+}
+
+.redes-sociales a:hover {
+    opacity: 1;
+    color: var(--clr-accent-soft);
+}
+
+.titulo-col-footer {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--clr-accent-soft);
+}
+
+.enlaces-footer {
+    list-style: none;
+    padding: 0;
+}
+
+.enlaces-footer li {
+    margin-bottom: 0.8rem;
+}
+
+.enlaces-footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    transition: var(--transition-fast);
+}
+
+.enlaces-footer a:hover {
+    opacity: 1;
+    padding-left: 5px;
+}
+
+/* Footer Bottom */
+.footer-abajo {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
 
 /* ANIMACIONES */
-
 /* Animación de desplazamiento infinito de izquierda a derecha */
 @keyframes scrollForward {
     0% {
@@ -1195,10 +1424,88 @@ img {
 /* Ajustes responsivos para móviles */
 @media (max-width: 768px) {
 
-    /* Ocultamos el menú principal en móvil por ahora */
-    .menu-navegacion {
-        display: none;
+    /* volvemos ha hacer el root para que se apliquen aqui bien las font-sizces sin necesidad de volver a poner todas las etiquetas con una nueva*/
+    :root {
+        --fs-h1: 2.2rem;
+        --fs-h2: 1.8rem;
+        --fs-h3: 1.3rem;
+        --fs-p: 1rem;
+        --fs-span: 0.85rem;
     }
+
+    .contenedor-navegacion {
+        position: relative;
+    }
+
+    /* Ocultamos el menú principal en móvil  */
+    .grupo-derecho-navegacion {
+        display: flex;
+        /* lo pongo con opacity 0 y visibiliti hidden pa que la animacion funcione al salir */
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        right: 0;
+        height: 0;
+        z-index: 100;
+        background-color: var(--clr-white);
+        padding: 20px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        transition: all 0.5s ease;
+        transform: translateY(-50px);
+    }
+
+    /* cuando este abierto el pongo el opacity y el visibility bien pa que haga la animacion */
+    .grupo-derecho-navegacion.menu-abierto {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        height: 80vh;
+    }
+
+    .menu-navegacion,
+    .acciones-navegacion {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--space-3);
+        align-items: center;
+        text-align: center;
+    }
+
+    /* menu movil */
+    .menu-movil {
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .linea-menu {
+        display: block;
+        z-index: 1000;
+        background-color: var(--clr-primary);
+        width: 30px;
+        height: 3px;
+        margin-bottom: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* transformacion a x cuando se abra el menu*/
+
+    .menu-movil.menu-cerrar .linea-menu1 {
+        transform: translateY(8.5px) rotate(45deg);
+    }
+
+    .menu-movil.menu-cerrar .linea-menu2 {
+        opacity: 0;
+    }
+
+    .menu-movil.menu-cerrar .linea-menu3 {
+        transform: translateY(-8.5px) rotate(-45deg);
+    }
+
 
     /* El hero pasa a ser una sola columna centrada */
     .contenido-hero {
