@@ -1,0 +1,1259 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* TOKENS DE DISEÑO Y VARIABLES (Define los colores, tipografías y escalas globales) */
+:root {
+    /* Colores Principales */
+    --clr-bg-main: #FAFAFA;
+    --clr-bg-sec: rgba(232, 245, 233, 0.3);
+    --clr-accent-soft: #81C784;
+    --clr-primary: #2E7D32;
+    --clr-primary-dark: #1b5e20;
+    --clr-text: #1A3622;
+    --clr-white: #FFFFFF;
+
+    /* Configuración del Efecto Glassmorphism */
+    --glass-bg: rgba(250, 250, 250, 0.7);
+    --glass-border: rgba(129, 199, 132, 0.2);
+
+    /* Tipografías */
+    --ff-heading: 'Outfit', sans-serif;
+    --ff-body: 'Nunito Sans', sans-serif;
+
+    /* Tamaños de Fuente (Escala para PC por defecto) */
+    --fs-h1: 3rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.1rem;
+    --fs-p: 1rem;
+    --fs-li: 0.8rem;
+    --fs-a: 0.8rem;
+    --fs-span: 0.9rem;
+
+    /* Sistema de espaciado relativo (Basado en rem para escalabilidad) */
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-6: 3rem;
+    --space-8: 6rem;
+
+    /* Sombras Elevadas */
+    --shadow-sm: 0 2px 4px rgba(26, 54, 34, 0.05);
+    --shadow-md: 0 4px 12px rgba(26, 54, 34, 0.08);
+    --shadow-lg: 0 10px 25px rgba(26, 54, 34, 0.12);
+
+    /* Transiciones */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reajuste de tamaños de fuente para Tablet */
+@media (max-width: 1024px) {
+    :root {
+        --fs-h1: 3rem;
+        --fs-h2: 2.2rem;
+        --fs-h3: 1.5rem;
+        --fs-p: 1.05rem;
+    }
+}
+
+/* Reajuste de tamaños de fuente para Móvil */
+@media (max-width: 768px) {
+    :root {
+        --fs-h1: 2.2rem;
+        --fs-h2: 1.8rem;
+        --fs-h3: 1.3rem;
+        --fs-p: 1rem;
+        --fs-span: 0.85rem;
+    }
+}
+
+/* RESETEO Y ESTILOS BASE (Afecta a todo el documento y elementos generales) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--ff-body);
+    background-color: var(--clr-bg-main);
+    color: var(--clr-text);
+    overflow-x: hidden;
+}
+
+/* Aplicación de variables de fuente a etiquetas globales */
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+h4 {
+    font-size: var(--fs-h4);
+}
+
+p {
+    font-size: var(--fs-p);
+}
+
+li {
+    font-size: var(--fs-li);
+}
+
+a {
+    font-size: var(--fs-a);
+}
+
+span {
+    font-size: var(--fs-span);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--ff-heading);
+    font-weight: 800;
+}
+
+/* Estilos básicos para enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+/* Quitar puntos de las listas */
+ul {
+    list-style: none;
+}
+
+/* Asegurar que las imágenes sean responsivas */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Secciones con fondo secundario (Gris/Verde muy suave) */
+.contenedor-hero,
+.solution-section,
+.process-section {
+    background-color: var(--clr-bg-sec);
+}
+
+/* COMPONENTES REUTILIZABLES */
+
+/* Estilo base para todos los botones del sitio */
+.btn-primario,
+.btn-secundario,
+.btn-esquema {
+    padding: 0.8em 1.6em;
+    border-radius: 3.125em;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+    font-family: var(--ff-body);
+    border: 0.125em solid transparent;
+}
+
+/* Botón principal (Verde sólido) */
+.btn-primario {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    transition: 0.5s all ease;
+}
+
+/* Efecto hover del botón principal */
+.btn-primario:hover {
+    background-color: var(--clr-primary-dark);
+    transform: translateY(-0.2rem);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Botón secundario (Solo texto) */
+.btn-secundario {
+    font-size: var(--fs-a);
+    color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+    background-color: transparent;
+}
+
+/* Efecto hover del botón secundario */
+.btn-secundario:hover {
+    color: var(--clr-primary-dark);
+}
+
+.btn-esquema {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+/* Efecto hover del botón de esquema */
+.btn-esquema:hover {
+    background-color: var(--clr-bg-sec);
+    transform: translateY(-0.125rem);
+}
+
+/* NAVEGACIÓN */
+
+/* Contenedor fijo que mantiene la barra de navegación arriba */
+.contenedor-cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: var(--space-2) 5%;
+}
+
+/* La barra de navegación flotante con efecto cristal */
+.contenedor-navegacion {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 0.0625rem solid var(--glass-border);
+    padding: var(--space-1) var(--space-3);
+    border-radius: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+/* Estilos para el logo dentro de la navegación */
+.logo-navegacion .img-logo {
+    height: 3.2rem;
+    width: auto;
+}
+
+/* Grupo que alinea el menú y los botones a la derecha */
+.grupo-derecho-navegacion {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+/* El menú de enlaces principales */
+.menu-navegacion {
+    display: flex;
+    gap: var(--space-3);
+}
+
+/* Estilos individuales para cada enlace del menú */
+.enlace-navegacion {
+    position: relative;
+    font-weight: 600;
+    font-size: var(--fs-span);
+    color: var(--clr-text);
+    opacity: 0.8;
+}
+
+/* la linea debajo de cada link*/
+.enlace-navegacion::after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--clr-primary);
+    position: absolute;
+    transition: 0.5s all ease;
+
+}
+
+/* Efecto hover de los enlaces de navegación */
+.enlace-navegacion:hover {
+    opacity: 1;
+    color: var(--clr-primary);
+}
+
+
+.enlace-navegacion:hover::after {
+    width: 50px;
+    transition: 0.3s all ease;
+}
+
+/* Contenedor de botones de login y reserva en la nav */
+.acciones-navegacion {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* Ajustes de tamaño para los botones específicos de la navegación */
+.acciones-navegacion .btn-secundario {
+    padding: 0.6em 1.2em;
+}
+
+/* SECCIÓN: HERO (Inicio de página) */
+
+/* Contenedor principal de la sección Hero */
+.contenedor-hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-8) 5% var(--space-4);
+}
+
+/* Grid que organiza el contenido textual y la imagen */
+.contenido-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    padding: 5% 0;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Bloque de texto a la izquierda */
+.hero-izquierdo {
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Título principal H1 del Hero */
+.titulo-hero {
+    line-height: 1.1;
+    margin-bottom: var(--space-3);
+    color: var(--clr-text);
+}
+
+/* Párrafo descriptivo del Hero */
+.texto-hero {
+    margin-bottom: var(--space-4);
+    opacity: 0.9;
+    max-width: 90%;
+}
+
+/* Grupo de botones principales de acción */
+.botones-hero {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+/* Bloque de imagen y elementos flotantes a la derecha */
+.hero-derecho {
+    position: relative;
+}
+
+/* Wrapper para posicionamiento relativo de las tarjetas sobre la imagen */
+.envoltura-imagen-hero {
+    position: relative;
+    border-radius: 1.25rem;
+}
+
+/* Estilos de la imagen principal del dashboard */
+.img-hero {
+    width: 100%;
+    height: auto;
+}
+
+/* SECCIÓN: CARACTERÍSTICAS (CARRUSEL INFINITO) */
+
+/* Contenedor principal del carrusel con fondo verde y recorte de contenido */
+.contenedor-carrusel-caracteristicas {
+    background-color: var(--clr-primary);
+    padding: var(--space-3) 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Sombras negras en los extremos para efecto de desvanecimiento */
+.contenedor-carrusel-caracteristicas::before,
+.contenedor-carrusel-caracteristicas::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Sombra izquierda */
+.contenedor-carrusel-caracteristicas::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+}
+
+/* Sombra derecha */
+.contenedor-carrusel-caracteristicas::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.6), transparent);
+}
+
+/* Carril que contiene los elementos y ejecuta la animación */
+.pista-carrusel {
+    display: flex;
+    white-space: nowrap;
+    width: fit-content;
+    animation: scrollForward 30s linear infinite;
+}
+
+/* Estilo individual de cada característica dentro del carrusel */
+.item-caracteristica {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: 0 var(--space-4);
+    color: var(--clr-white);
+}
+
+/* Iconos de las características en blanco con opacidad suave */
+.icono-caracteristica {
+    font-size: 1.4rem;
+    color: var(--clr-accent-soft);
+    display: flex;
+    align-items: center;
+}
+
+/* Texto de la característica con tipografía Nunito */
+.texto-caracteristica {
+    font-size: var(--fs-span);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+/* ESTILOS DE SECCIÓN GENERALES */
+
+/* Contenedor centralizado para mantener el ancho de lectura */
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Encabezado de sección común (Centrado) */
+.encabezado-seccion {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto var(--space-4);
+}
+
+/* Etiqueta pequeña sobre el título H2 */
+.etiqueta-seccion {
+    display: inline-block;
+    color: var(--clr-primary);
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    font-size: var(--fs-span);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-2);
+    padding: 0.2rem 0.8rem;
+    background-color: var(--clr-bg-sec);
+    border-radius: 10px;
+}
+
+/* SECCIÓN: PROBLEMA */
+
+/* Espaciado general de la sección problema */
+.seccion-problema {
+    padding: var(--space-8) 0;
+    background-color: var(--clr-bg-main);
+}
+
+/* Título de la sección problema */
+.titulo-problema {
+    margin-bottom: var(--space-2);
+}
+
+/* Texto introductorio de la sección problema */
+.texto-problema {
+    color: var(--clr-text);
+    opacity: 0.8;
+}
+
+/* Grid que organiza las 3 tarjetas de problemas */
+.grid-problema {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+}
+
+/* Estilo individual de cada tarjeta de problema */
+.tarjeta-problema {
+    background-color: var(--clr-white);
+    padding: var(--space-4);
+    border-radius: 1.25rem;
+    border: 1px solid rgba(129, 199, 132, 0.1);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Efecto hover en las tarjetas: elevación y sombra más profunda */
+.tarjeta-problema:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--clr-accent-soft);
+}
+
+/* Caja contenedora del icono dentro de la tarjeta */
+.div-icono-tarjeta {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--clr-bg-sec);
+    color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: var(--space-3);
+    transition: var(--transition-fast);
+}
+
+/* El icono rota levemente al hacer hover en la tarjeta */
+.tarjeta-problema:hover .div-icono-tarjeta {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    transform: rotate(-5deg);
+}
+
+/* Título interno H3 de la tarjeta */
+.titulo-tarjeta {
+    font-size: var(--fs-h4);
+    margin-bottom: var(--space-1);
+    color: var(--clr-text);
+}
+
+/* Descripción del problema dentro de la tarjeta */
+.descripcion-tarjeta {
+    font-size: var(--fs-p);
+    opacity: 0.8;
+}
+
+/* SECCIÓN: SOLUCIÓN */
+
+/* Layout principal de la sección solución (Grid de 2 columnas) */
+.seccion-solucion {
+    padding: var(--space-8) 0;
+    background-color: rgba(217, 247, 218, 0.15);
+}
+
+/* Contenedor del grid de solución */
+.contenedor-solucion {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-6);
+    align-items: start;
+}
+
+/* Columna izquierda: Se mantiene fija al hacer scroll (Sticky) */
+.parte-izquierda-solucion {
+    position: sticky;
+    top: var(--space-8);
+}
+
+/* Título de la solución */
+.titulo-solucion {
+    margin: var(--space-2) 0 var(--space-4);
+    line-height: 1.2;
+}
+
+/* Contenedor de botones de perfil (Profesional/Usuario) */
+.botones-solucion {
+    display: flex;
+    gap: var(--space-2);
+}
+
+/* Columna derecha: Lista de características en flex vertical */
+.lista-caracteristicas-solucion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Cada ítem de característica (Fila horizontal) */
+.item-caracteristica-solucion {
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    border-radius: 1.25rem;
+    transition: var(--transition-smooth);
+    border: 2px solid rgba(129, 199, 132, 0.1);
+}
+
+/* Efecto hover suave: sombreado y borde sutil */
+.item-caracteristica-solucion:hover {
+    background-color: var(--clr-bg-main);
+    border-color: var(--clr-accent-soft);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Reutilización y ajuste del box de iconos para la solución */
+.item-caracteristica-solucion .div-icono-caracteristica,
+.fila-beneficio .div-icono-beneficio {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--clr-bg-sec);
+    color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    transition: var(--transition-smooth);
+}
+
+/* Cambio de color del icono al pasar el ratón sobre el ítem */
+.item-caracteristica-solucion:hover .div-icono-caracteristica,
+.fila-beneficio:hover .div-icono-beneficio {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+/* Título interno de la característica */
+.titulo-caracteristica {
+    font-size: var(--fs-h4);
+    margin-bottom: 0.25rem;
+    color: var(--clr-text);
+}
+
+/* Descripción de la característica */
+.descripcion-caracteristica {
+    font-size: var(--fs-p);
+    opacity: 0.8;
+    transition: var(--transition-smooth);
+}
+
+/* hover de la desxripcion al pasar el cursor por el div */
+
+.item-caracteristica-solucion:hover .descripcion-caracteristica {
+    opacity: 1;
+}
+
+/* SECCIÓN: BENEFICIOS */
+
+.seccion-beneficios {
+    padding: 100px 0;
+    position: relative;
+}
+
+/* estilos al contenedor de dentro de la seccion */
+.contenedor-beneficios {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    gap: 5rem;
+}
+
+/* estilos a la columna de la derecha*/
+.parte-izquierda-beneficios {
+    position: relative;
+    order: 2;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* estilos al titulo y descripcion que esta en la columna derecha */
+.encabezado-beneficio {
+    position: sticky;
+    text-align: right;
+    top: 150px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+/* estilos al span de el header de la seccion de beneficios*/
+.encabezado-beneficio .etiqueta-seccion {
+    width: fit-content;
+    margin-left: auto;
+    /* para alineacion a la derecha */
+}
+
+
+/* estilos al numero que esta sticky */
+.sticky-number-wrapper {
+    position: sticky;
+    top: 160px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+/* estilos al numero "01" */
+.sticky-number-wrapper span {
+    font-size: 2.5rem;
+
+}
+
+/* estilos al conentedor de los beneficios */
+.parte-derecha-beneficios {
+    position: relative;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+/* estilos a cada contenedor de cada beneficio */
+.fila-beneficio {
+    position: sticky;
+    margin-bottom: var(--space-8);
+    display: flex;
+    gap: var(--space-4);
+    justify-content: space-between;
+    padding: 1.5rem;
+    border: 2px solid rgba(129, 199, 132, 0.1);
+    background-color: var(--clr-bg-main);
+    border-radius: 1.25rem;
+}
+
+.fila-beneficio:nth-child(1) {
+    top: 160px;
+}
+
+.fila-beneficio:nth-child(2) {
+    top: 180px;
+}
+
+.fila-beneficio:nth-child(3) {
+    top: 200px;
+}
+
+.fila-beneficio:nth-child(4) {
+    top: 220px;
+}
+
+/* estilos al titulo del beneficio */
+.titulo-beneficio {
+    font-size: var(--fs-h3);
+    margin-bottom: var(--space-1);
+    color: var(--clr-text);
+}
+
+/* estilos a la descripcion del beneficio */
+.descripcion-beneficio {
+    font-size: var(--fs-p);
+    opacity: 0.8;
+}
+
+/* estilos al titulo de los beneficios (el que esta sticky) */
+.titulo-beneficios {
+    font-size: var(--fs-h2);
+    color: var(--clr-text);
+    margin-bottom: var(--space-1);
+}
+
+/* estilos al texto que esta debajo del titulo sticky */
+.texto-beneficios {
+    font-size: var(--fs-p);
+    opacity: 0.8;
+}
+
+/* estilos al cta de los beneficios */
+.cta-beneficios {
+    margin-top: var(--space-3);
+}
+
+/* SECCION A "EL PROCESO" */
+.seccion-proceso {
+    padding: 6rem 0;
+}
+
+/* estilos al div que tiene todos los pasos del proceso */
+.contenedor-pasos-proceso {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* estilos a cada fila que es cada proceso*/
+.fila-proceso {
+    position: relative;
+    background-color: var(--clr-bg-main);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border: 2px solid rgba(129, 199, 132, 0.1);
+    border-radius: 1.25rem;
+}
+
+/* estilos a el texto de cada proceso */
+.contenido-proceso {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.fila-proceso img {
+    border-radius: 1.25rem;
+    width: 70%;
+    object-fit: cover;
+    box-shadow: var(--shadow-md);
+}
+
+.div-imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.fila-invertida {
+    grid-template-columns: 1.2fr 1fr;
+    text-align: right;
+
+}
+
+.fila-invertida h3,
+.fila-invertida .numero-paso {
+    margin-left: auto;
+}
+
+/* estilos al numero de los pasos */
+.numero-paso {
+    font-size: var(--fs-h3);
+    font-weight: bold;
+    color: var(--clr-primary);
+    padding: 10px 20px;
+    background-color: #d9f7da;
+    border-radius: 20px;
+}
+
+.fila-invertida .imagen-proceso {
+    order: 1;
+}
+
+.fila-invertida .contenido-proceso {
+    order: 2;
+}
+
+
+/* SECCIÓN SERVICIOS */
+
+/* estilos al contenedor de servicios*/
+.container-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* estilos al container de los botones*/
+.container-btn-servicios {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0;
+}
+
+/* estilos a cada boton*/
+.btn-tab-servicio {
+    padding: 10px 20px;
+    border: 2px solid var(--clr-primary);
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--clr-primary);
+    cursor: pointer;
+}
+
+/* estilos al boton que tengo la clase activo (el cual va a mostar sus pestañas)*/
+.btn-tab-servicio.activo {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+/* estilos de los botons al hacer hover (solo si no están activos) */
+.btn-tab-servicio:not(.activo):hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    border-color: var(--clr-secondary);
+}
+
+/* estilos al contenedor de las pestañas y la imagen */
+.grid-panel-servicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2% 0;
+    padding: 0 5%;
+    gap: 5rem;
+}
+
+/* estilos al contenedor que tiene todos los item que tienen el icono y el texto */
+.lista-funciones-servicio {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+/* estilos a cada servicio que tiene el icono + text */
+.item-funcion-servicio {
+    display: flex;
+    gap: 1.5rem;
+    border: 1px solid var(--clr-accent-soft);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* estilos a cada contenedor de cada servicio */
+.div-icono-servicio {
+    padding: 10px 20px;
+    background-color: var(--clr-bg-sec);
+    color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    flex-shrink: 0;
+    transition: var(--transition-smooth);
+}
+
+/* estilos a cada contenedor de cada servicio al hacer hover */
+.item-funcion-servicio:hover .div-icono-servicio {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+/* estilos al icono de cada servicio */
+.div-icono-servicio i {
+    font-size: 2rem;
+}
+
+/* ANIMACIONES */
+
+/* Animación de desplazamiento infinito de izquierda a derecha */
+@keyframes scrollForward {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animación de flotado vertical (Sube y baja suavemente) */
+@keyframes floatVertical {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.9375rem);
+        /* 15px */
+    }
+}
+
+/* Ajustes responsivos para tablets */
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: var(--space-4);
+    }
+}
+
+/* Ajustes responsivos para móviles */
+@media (max-width: 768px) {
+
+    /* Ocultamos el menú principal en móvil por ahora */
+    .nav-menu {
+        display: none;
+    }
+
+    /* El hero pasa a ser una sola columna centrada */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: var(--space-6);
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-right {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Reajuste de tarjetas flotantes en móvil para que no se salgan de pantalla */
+    .float-bottom-left,
+    .float-bottom-right {
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+    }
+
+    .float-bottom-left {
+        bottom: -1rem;
+        left: -60%;
+    }
+
+    .float-bottom-right {
+        top: 0;
+        right: -60%;
+    }
+
+    /* Ajuste de velocidad del carrusel en móvil para mejor legibilidad */
+    .features-track {
+        animation-duration: 15s;
+    }
+
+    .feature-item {
+        padding: 0 var(--space-2);
+    }
+
+    /* Ajustes responsivos para la sección Problema en móvil */
+    .problem-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .problem-card {
+        padding: var(--space-3);
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-icon-box {
+        margin-bottom: var(--space-2);
+    }
+
+
+    /* adaptado del movil a la solucion */
+    .solution-container {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-left {
+        position: relative;
+        top: 0;
+    }
+
+    /* responsive de la seccion "beneficios" */
+
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .benefits-left {
+        order: 1;
+    }
+
+    .benefits-right {
+        order: 2;
+    }
+
+
+    /* El contenedor del número se queda pegado arriba */
+    .benefits-left {
+        order: 1;
+        position: sticky;
+        top: 70px;
+        /* Ajusta según la altura de tu menú */
+        z-index: 100;
+        background-color: var(--clr-bg-main);
+        /* Para que las tarjetas pasen "por debajo" limpiamente */
+        padding: var(--space-2) 0;
+    }
+
+    .benefits-right {
+        order: 2;
+    }
+
+    /* El wrapper interno ya no necesita ser sticky en móvil */
+    .sticky-number-wrapper {
+        position: relative;
+        top: 0;
+    }
+}
+
+/* ANIMACIONES */
+
+/* Animación de desplazamiento infinito de izquierda a derecha */
+@keyframes scrollForward {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animación de flotado vertical (Sube y baja suavemente) */
+@keyframes floatVertical {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.9375rem);
+        /* 15px */
+    }
+}
+
+/* Ajustes responsivos para tablets */
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: var(--space-4);
+    }
+}
+
+/* Ajustes responsivos para móviles */
+@media (max-width: 768px) {
+
+    /* Ocultamos el menú principal en móvil por ahora */
+    .nav-menu {
+        display: none;
+    }
+
+    /* El hero pasa a ser una sola columna centrada */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: var(--space-6);
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-right {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Reajuste de tarjetas flotantes en móvil para que no se salgan de pantalla */
+    .float-bottom-left,
+    .float-bottom-right {
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+    }
+
+    .float-bottom-left {
+        bottom: -1rem;
+        left: -60%;
+    }
+
+    .float-bottom-right {
+        top: 0;
+        right: -60%;
+    }
+
+    /* Ajuste de velocidad del carrusel en móvil para mejor legibilidad */
+    .features-track {
+        animation-duration: 15s;
+    }
+
+    .feature-item {
+        padding: 0 var(--space-2);
+    }
+
+    /* Ajustes responsivos para la sección Problema en móvil */
+    .problem-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .problem-card {
+        padding: var(--space-3);
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-icon-box {
+        margin-bottom: var(--space-2);
+    }
+
+
+    /* adaptado del movil a la solucion */
+    .solution-container {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-left {
+        position: relative;
+        top: 0;
+    }
+
+    /* responsive de la seccion "beneficios" */
+
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .benefits-left {
+        order: 1;
+    }
+
+    .benefits-right {
+        order: 2;
+    }
+
+
+    /* El contenedor del número se queda pegado arriba */
+    .benefits-left {
+        order: 1;
+        position: sticky;
+        top: 70px;
+        /* Ajusta según la altura de tu menú */
+        z-index: 100;
+        background-color: var(--clr-bg-main);
+        /* Para que las tarjetas pasen "por debajo" limpiamente */
+        padding: var(--space-2) 0;
+    }
+
+    .benefits-right {
+        order: 2;
+    }
+
+    /* El wrapper interno ya no necesita ser sticky en móvil */
+    .sticky-number-wrapper {
+        position: relative;
+        top: 0;
+    }
+}

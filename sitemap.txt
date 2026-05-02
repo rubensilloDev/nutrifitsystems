@@ -1,0 +1,13 @@
+Page: **Inicio**
+ - Barra de Navegación
+ - Hero Section: Propuesta de valor clara y atractiva con un botón principal de llamada a la acción muy visible para captar la atención del visitante.
+ - Problema: Descripción de los dolores de cabeza del nutricionista y una persona normal: el caos de usar varias apps, Excel y WhatsApp, y la pérdida de tiempo manual.
+ - Solucion: Presentación de NutriFit Systems como la herramienta única que centraliza todo el trabajo en un solo lugar de forma inteligente.
+ - Beneficios: Enfoque en los resultados que obtiene el profesional y una persona particular: más tiempo libre, mejor imagen de marca, pacientes que no abandonan la dieta, facil interacción, centralizado todo...
+ - Sección Cómo Funciona: Guía visual de pocos pasos (configurar, asignar dieta, trackear calorias...) usando capturas para demostrar que la app es fácil e intuitiva.
+ - Sección de Servicios: Lista de funciones principales: tracker, análisis, chat integrado, subidas de analiticas y otras características destacadas del software.
+ - Sección de Testimonios: Prueba social con testimonios, cifras relevantes de mercado y mensajes que refuercen la confianza en la solución.
+ - Sección de Precios: Tabla de planes de precios, los cuales van a dividirse en 2 tipos de precios (usuario normal y nutricionista/preparador) destacando visualmente el plan Profesional para guiar la decisión de compra.
+ - Sección de Preguntas Frecuentes: Sección de FAQ que resuelve objeciones sobre privacidad de datos, curva de aprendizaje, condiciones de permanencia, etc.
+ - Sección de CTA: Última llamada a la acción con un botón grande y visible para incentivar la conversión inmediata.
+ - Pie de Página
