@@ -113,7 +113,7 @@ li {
 }
 
 a {
-    font-size: var(--fs-a);
+    font-size: var(--fs-p);
 }
 
 span {
@@ -150,7 +150,8 @@ img {
 .contenedor-hero,
 .solution-section,
 .process-section {
-    background-color: var(--clr-bg-sec);
+    background: #2E7D32;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(129, 199, 132, 1) 100%);
 }
 
 /* COMPONENTES REUTILIZABLES */
@@ -173,6 +174,7 @@ img {
     background-color: var(--clr-primary);
     color: var(--clr-white);
     transition: 0.5s all ease;
+    font-size: var(--fs-a);
 }
 
 /* Efecto hover del botón principal */
@@ -182,8 +184,9 @@ img {
     box-shadow: var(--shadow-lg);
 }
 
-/* Botón secundario (Solo texto) */
+/* Botón secundario  */
 .btn-secundario {
+    position: relative;
     font-size: var(--fs-a);
     color: var(--clr-primary);
     border: 2px solid var(--clr-primary);
@@ -201,9 +204,46 @@ img {
 }
 
 /* Efecto hover del botón de esquema */
+.btn-esquema {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-esquema::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: var(--clr-primary);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
 .btn-esquema:hover {
-    background-color: var(--clr-bg-sec);
-    transform: translateY(-0.125rem);
+    color: white;
+    z-index: 5;
+}
+
+.btn-esquema:hover:after {
+    z-index: -1;
+    width: 100%;
+}
+
+/* palabras destacadas */
+.palabras-importantes {
+    font-style: italic;
+    font-family: var(--ff-serif);
+}
+
+/* palabras importantes del titulo del hero */
+.importante-h1 {
+    font-size: 3.2rem;
+    margin-left: 10px;
+    color: var(--clr-primary-dark);
+    text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
 }
 
 /* NAVEGACIÓN */
@@ -222,21 +262,20 @@ img {
 .contenedor-navegacion {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 0.0625rem solid var(--glass-border);
+    border: 1px solid var(--glass-border);
     padding: var(--space-1) var(--space-3);
     border-radius: 6.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--shadow-md);
-    max-width: 75rem;
+    max-width: 90%;
     margin: 0 auto;
 }
 
 /* Estilos para el logo dentro de la navegación */
 .logo-navegacion .img-logo {
-    height: 3.2rem;
+    height: 3rem;
     width: auto;
 }
 
@@ -347,6 +386,12 @@ img {
     gap: var(--space-2);
 }
 
+/* estilos al boton del cta del hero*/
+.btn-cta-hero,
+.btn-esquema-hero {
+    font-size: var(--fs-p);
+}
+
 /* Bloque de imagen y elementos flotantes a la derecha */
 .hero-derecho {
     position: relative;
@@ -362,6 +407,10 @@ img {
 .img-hero {
     width: 100%;
     height: auto;
+}
+
+.img-hero-movil {
+    display: none;
 }
 
 /* SECCIÓN: CARACTERÍSTICAS (CARRUSEL INFINITO) */
@@ -651,7 +700,7 @@ img {
 /* SECCIÓN: BENEFICIOS */
 
 .seccion-beneficios {
-    padding: 100px 0;
+    padding: 4rem 0;
     position: relative;
 }
 
@@ -779,7 +828,7 @@ img {
 
 /* SECCION A "EL PROCESO" */
 .seccion-proceso {
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 /* estilos al div que tiene todos los pasos del proceso */
@@ -875,6 +924,7 @@ img {
 
 /* estilos a cada boton*/
 .btn-tab-servicio {
+    font-family: var(--ff-body);
     padding: 10px 20px;
     border: 2px solid var(--clr-primary);
     border-radius: 20px;
@@ -884,13 +934,13 @@ img {
 }
 
 /* estilos al boton que tengo la clase activo (el cual va a mostar sus pestañas)*/
-.btn-tab-servicio.activo {
+.btn-tab-servicio.btn-activo {
     background-color: var(--clr-primary);
     color: var(--clr-white);
 }
 
 /* estilos de los botons al hacer hover (solo si no están activos) */
-.btn-tab-servicio:not(.activo):hover {
+.btn-tab-servicio:not(.btn-activo):hover {
     background-color: var(--clr-primary);
     color: var(--clr-white);
     border-color: var(--clr-secondary);
@@ -899,7 +949,8 @@ img {
 /* estilos al contenedor de las pestañas y la imagen */
 .grid-panel-servicio {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
     margin: 2% 0;
     padding: 0 5%;
     gap: 5rem;
@@ -946,160 +997,35 @@ img {
     font-size: 2rem;
 }
 
-/* ANIMACIONES */
-
-/* Animación de desplazamiento infinito de izquierda a derecha */
-@keyframes scrollForward {
-    0% {
-        transform: translateX(-50%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
+/* estilos al conenedor de la imegn*/
+.imagen-panel-servicio {
+    width: 550px;
+    height: 300px;
+    position: sticky;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-accent-soft);
+    border: 1px solid transparent;
+    padding: 5%;
+    border-radius: 52% 48% 48% 52% / 21% 44% 56% 79%;
 }
 
-/* Animación de flotado vertical (Sube y baja suavemente) */
-@keyframes floatVertical {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-0.9375rem);
-        /* 15px */
-    }
+.imagen-panel-servicio img {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
 }
 
-/* Ajustes responsivos para tablets */
-@media (max-width: 1024px) {
-    .hero-content {
-        gap: var(--space-4);
-    }
+.envoltura-imagen-servicio {
+    overflow: visible;
+    position: relative;
 }
 
-/* Ajustes responsivos para móviles */
-@media (max-width: 768px) {
-
-    /* Ocultamos el menú principal en móvil por ahora */
-    .nav-menu {
-        display: none;
-    }
-
-    /* El hero pasa a ser una sola columna centrada */
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding-top: var(--space-6);
-    }
-
-    .hero-left {
-        max-width: 100%;
-    }
-
-    .hero-right {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    /* Reajuste de tarjetas flotantes en móvil para que no se salgan de pantalla */
-    .float-bottom-left,
-    .float-bottom-right {
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: fit-content;
-    }
-
-    .float-bottom-left {
-        bottom: -1rem;
-        left: -60%;
-    }
-
-    .float-bottom-right {
-        top: 0;
-        right: -60%;
-    }
-
-    /* Ajuste de velocidad del carrusel en móvil para mejor legibilidad */
-    .features-track {
-        animation-duration: 15s;
-    }
-
-    .feature-item {
-        padding: 0 var(--space-2);
-    }
-
-    /* Ajustes responsivos para la sección Problema en móvil */
-    .problem-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-3);
-    }
-
-    .problem-card {
-        padding: var(--space-3);
-        align-items: center;
-        text-align: center;
-    }
-
-    .card-icon-box {
-        margin-bottom: var(--space-2);
-    }
-
-
-    /* adaptado del movil a la solucion */
-    .solution-container {
-        grid-template-columns: 1fr;
-    }
-
-    .solution-left {
-        position: relative;
-        top: 0;
-    }
-
-    /* responsive de la seccion "beneficios" */
-
-    .benefits-container {
-        grid-template-columns: 1fr;
-    }
-
-
-    .benefits-left {
-        order: 1;
-    }
-
-    .benefits-right {
-        order: 2;
-    }
-
-
-    /* El contenedor del número se queda pegado arriba */
-    .benefits-left {
-        order: 1;
-        position: sticky;
-        top: 70px;
-        /* Ajusta según la altura de tu menú */
-        z-index: 100;
-        background-color: var(--clr-bg-main);
-        /* Para que las tarjetas pasen "por debajo" limpiamente */
-        padding: var(--space-2) 0;
-    }
-
-    .benefits-right {
-        order: 2;
-    }
-
-    /* El wrapper interno ya no necesita ser sticky en móvil */
-    .sticky-number-wrapper {
-        position: relative;
-        top: 0;
-    }
+/* lo ocultamos para las pestañas */
+.oculto {
+    display: none;
 }
 
 /* ANIMACIONES */
@@ -1136,124 +1062,321 @@ img {
     }
 }
 
+/* SECCIÓN: PRECIOS */
+
+.seccion-precios {
+    padding: 4rem 0;
+}
+
+.panel-precio {
+    margin: 5% 0;
+}
+
+/* grid de las 3 tarjetas de precio */
+.grid-precios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* estilos a cada tarejeta */
+.tarjeta-precio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 50px 30px;
+    border: 1px solid var(--clr-accent-soft);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.tarjeta-precio:hover {
+    box-shadow: 0 10px 10px rgba(34, 197, 94, 0.3);
+    transform: translateY(-10px);
+}
+
+/* estilo a la tarjeta del plan recomendado*/
+.destacado {
+    position: relative;
+    color: white;
+    background: linear-gradient(135deg, #00b141 0%, #22c55e 100%);
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.25);
+    border: 2px solid var(--clr-primary-dark);
+    transform: scale(1.1);
+}
+
+.destacado:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
+.btn-plan,
+.btn-plan-pro {
+    width: fit-content;
+    font-size: var(--fs-a);
+}
+
+/* estilos al boton del plan pro*/
+.btn-plan-pro {
+    border: solid white;
+    color: white;
+}
+
+.nombre-plan {
+    font-size: 1.8rem;
+}
+
+/* estilos a las caracteristicas de cada plan */
+
+.lista-caracteristicas-precio li {
+    font-size: 1rem;
+
+}
+
+/* estilos al espan de "destacado" y "más popular"*/
+.etiqueta-destacado {
+    font-size: 0.7rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--clr-primary-dark);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+}
+
+/* estilos a los precios */
+
+.span-precio {
+    font-size: 2.1rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/* ANIMACIONES */
+
+/* Animación de desplazamiento infinito de izquierda a derecha */
+@keyframes scrollForward {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animación de flotado vertical (Sube y baja suavemente) */
+@keyframes floatVertical {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.9375rem);
+        /* 15px */
+    }
+}
+
+/* Ajustes responsivos para tablets */
+@media (max-width: 1024px) {
+    .contenido-hero {
+        gap: var(--space-4);
+    }
+}
+
 /* Ajustes responsivos para móviles */
 @media (max-width: 768px) {
 
     /* Ocultamos el menú principal en móvil por ahora */
-    .nav-menu {
+    .menu-navegacion {
         display: none;
     }
 
     /* El hero pasa a ser una sola columna centrada */
-    .hero-content {
+    .contenido-hero {
         grid-template-columns: 1fr;
         text-align: center;
         padding-top: var(--space-6);
     }
 
-    .hero-left {
+
+    .hero-izquierdo {
         max-width: 100%;
     }
 
-    .hero-right {
+    .hero-derecho {
         max-width: 80%;
         margin: 0 auto;
     }
 
-    .hero-buttons {
+    .botones-hero {
         justify-content: center;
     }
 
+    /* img del hero del movil */
+    .img-hero {
+        display: none;
+    }
+
+    .img-hero-movil {
+        display: block;
+    }
+
     /* Reajuste de tarjetas flotantes en móvil para que no se salgan de pantalla */
-    .float-bottom-left,
-    .float-bottom-right {
+    .flotante-abajo-izquierda,
+    .flotante-abajo-derecha {
         left: 0;
         right: 0;
         margin: auto;
         width: fit-content;
     }
 
-    .float-bottom-left {
+    .flotante-abajo-izquierda {
         bottom: -1rem;
         left: -60%;
     }
 
-    .float-bottom-right {
+    .flotante-abajo-derecha {
         top: 0;
         right: -60%;
     }
 
     /* Ajuste de velocidad del carrusel en móvil para mejor legibilidad */
-    .features-track {
+    .pista-carrusel {
         animation-duration: 15s;
     }
 
-    .feature-item {
+    .item-caracteristica {
         padding: 0 var(--space-2);
     }
 
     /* Ajustes responsivos para la sección Problema en móvil */
-    .problem-grid {
+    .grid-problema {
         grid-template-columns: 1fr;
         gap: var(--space-3);
     }
 
-    .problem-card {
+    .tarjeta-problema {
         padding: var(--space-3);
         align-items: center;
         text-align: center;
     }
 
-    .card-icon-box {
+    .div-icono-tarjeta {
         margin-bottom: var(--space-2);
     }
 
 
     /* adaptado del movil a la solucion */
-    .solution-container {
+    .contenedor-solucion {
         grid-template-columns: 1fr;
     }
 
-    .solution-left {
+    .parte-izquierda-solucion {
         position: relative;
         top: 0;
     }
 
     /* responsive de la seccion "beneficios" */
 
-    .benefits-container {
+    .contenedor-beneficios {
         grid-template-columns: 1fr;
     }
 
+    .encabezado-beneficio {
+        position: relative;
+        text-align: center;
+        top: 0;
+    }
 
-    .benefits-left {
+    .encabezado-beneficio .etiqueta-seccion {
+        margin: 0 auto;
+    }
+
+
+    .parte-izquierda-beneficios {
         order: 1;
     }
 
-    .benefits-right {
+    .parte-derecha-beneficios {
         order: 2;
     }
 
-
-    /* El contenedor del número se queda pegado arriba */
-    .benefits-left {
-        order: 1;
-        position: sticky;
-        top: 70px;
-        /* Ajusta según la altura de tu menú */
-        z-index: 100;
-        background-color: var(--clr-bg-main);
-        /* Para que las tarjetas pasen "por debajo" limpiamente */
-        padding: var(--space-2) 0;
-    }
-
-    .benefits-right {
+    .parte-derecha-beneficios {
         order: 2;
     }
 
     /* El wrapper interno ya no necesita ser sticky en móvil */
-    .sticky-number-wrapper {
+    .envoltura-numero-fijo {
         position: relative;
         top: 0;
     }
+
+    /* rESPONSIVE DE LA SECCION DE EL PROCESO*/
+    .fila-proceso {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-proceso {
+        position: relative;
+        top: 0;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .fila-invertida {
+        grid-template-columns: 1fr;
+
+    }
+
+    .fila-invertida .contenido-proceso {
+        order: 1;
+    }
+
+    .fila-invertida .imagen-proceso {
+        order: 2;
+    }
+
+    .fila-proceso h3,
+    .fila-proceso p,
+    .fila-invertida .numero-paso {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Responsive de la seccion de los servicios*/
+    .grid-panel-servicio {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-panel-servicio {
+        position: relative;
+        order: 2;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .imagen-panel-servicio img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Responsive de la seccion de planes */
+
+    .grid-precios {
+        grid-template-columns: 1fr;
+
+    }
+
 }
