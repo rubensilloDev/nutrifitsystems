@@ -21,6 +21,9 @@
     <!-- Custom Style -->
     <link rel="stylesheet" href="style/style.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -61,23 +64,25 @@
         <section class="contenedor-hero" id="hero">
             <div class="contenido-hero">
                 <div class="hero-izquierdo">
-                    <h1 class="titulo-hero"><span class="palabras-importantes importante-h1">NutriFit:</span><br>Control
+                    <h1 class="titulo-hero" data-aos="fade-down"><span
+                            class="palabras-importantes importante-h1">NutriFit:</span><br>Control
                         total de la
                         nutrición en un solo lugar.</h1>
-                    <p class="texto-hero">
+                    <p class="texto-hero" data-aos="fade-down">
                         Centraliza la gestión de tu consulta profesional o haz el seguimiento de tu dieta personal de
                         forma ágil.
                     </p>
                     <div class="botones-hero">
-                        <a href="#" class="btn-primario btn-cta-hero">Reservar Ahora</a>
-                        <a href="#" class="btn-esquema btn-esquema-hero">Ver demo</a>
+                        <a href="#" class="btn-primario btn-cta-hero" data-aos="fade-right">Reservar Ahora</a>
+                        <a href="#" class="btn-esquema btn-esquema-hero" data-aos="fade-left">Ver demo</a>
                     </div>
                 </div>
                 <div class="hero-derecho">
                     <div class="envoltura-imagen-hero">
                         <!-- Imagen representativa de la plataforma -->
-                        <img src="./img/img-hero.webp" alt="Dashboard de NutriFit" class="img-hero">
-                        <img src="./img/img-hero-movil.png" alt="Dashboard de NutriFit" class="img-hero-movil">
+                        <img src="./img/img-hero.webp" alt="Dashboard de NutriFit" class="img-hero" data-aos="fade-up">
+                        <img src="./img/img-hero-movil.png" alt="Dashboard de NutriFit" class="img-hero-movil"
+                            data-aos="fade-up">
 
                     </div>
                 </div>
@@ -86,7 +91,7 @@
         <!-- SECCIÓN: CARACTERÍSTICAS -->
         <section class="contenedor-carrusel-caracteristicas" id="caracteristicas">
             <div class="pista-carrusel">
-                <!-- Bloque Original -->
+
                 <div class="item-caracteristica">
                     <div class="icono-caracteristica"><i class="ri-magic-line"></i></div>
                     <p class="texto-caracteristica">Dietas inteligentes automáticas</p>
@@ -108,7 +113,7 @@
                     <p class="texto-caracteristica">Seguridad RGPD de nivel médico</p>
                 </div>
 
-                <!-- Duplicado para Loop Infinito -->
+                <!-- se duplica lo anterior par que la animacion sea infinita -->
                 <div class="item-caracteristica">
                     <div class="icono-caracteristica"><i class="ri-magic-line"></i></div>
                     <p class="texto-caracteristica">Dietas inteligentes automáticas</p>
@@ -142,8 +147,8 @@
                 </div>
 
                 <div class="grid-problema">
-                    <!-- Tarjeta 1: Gestión Lenta -->
-                    <div class="tarjeta-problema">
+                    <!-- Tarjeta 1 -->
+                    <div class="tarjeta-problema" data-aos="fade-right">
                         <div class="div-icono-tarjeta">
                             <i class="ri-history-line"></i>
                         </div>
@@ -153,8 +158,8 @@
                             no aportan valor.</p>
                     </div>
 
-                    <!-- Tarjeta 2: Datos Inexactos -->
-                    <div class="tarjeta-problema">
+                    <!-- Tarjeta 2 -->
+                    <div class="tarjeta-problema" data-aos="fade-down">
                         <div class="div-icono-tarjeta">
                             <i class="ri-bubble-chart-line"></i>
                         </div>
@@ -163,8 +168,8 @@
                             impidiendo ajustes precisos.</p>
                     </div>
 
-                    <!-- Tarjeta 3: Abandono -->
-                    <div class="tarjeta-problema">
+                    <!-- Tarjeta 3 -->
+                    <div class="tarjeta-problema" data-aos="fade-left">
                         <div class="div-icono-tarjeta">
                             <i class="ri-emotion-sad-line"></i>
                         </div>
@@ -179,7 +184,7 @@
         <section class="seccion-solucion container-alternos" id="solution">
             <div class="contenedor-solucion container">
                 <!-- Columna Izquierda: Texto Principal y Perfiles -->
-                <div class="parte-izquierda-solucion">
+                <div class="parte-izquierda-solucion" data-aos="fade-right">
                     <span class="etiqueta-seccion">LA SOLUCIÓN</span>
                     <h2 class="titulo-solucion">Todo tu trabajo unificado.</h2>
                     <div class="botones-solucion">
@@ -191,8 +196,8 @@
                 <!-- Columna Derecha: Lista de Características (6 Filas) -->
                 <div class="parte-derecha-solucion">
                     <div class="lista-caracteristicas-solucion">
-                        <!-- 1. Gestión Centralizada -->
-                        <div class="item-caracteristica-solucion">
+
+                        <div class="item-caracteristica-solucion" data-aos="fade-left">
                             <div class="div-icono-caracteristica">
                                 <i class="ri-focus-3-line"></i>
                             </div>
@@ -204,8 +209,7 @@
                             </div>
                         </div>
 
-                        <!-- 2. Privacidad Total -->
-                        <div class="item-caracteristica-solucion">
+                        <div class="item-caracteristica-solucion" data-aos="fade-left">
                             <div class="div-icono-caracteristica">
                                 <i class="ri-shield-user-line"></i>
                             </div>
@@ -217,8 +221,7 @@
                             </div>
                         </div>
 
-                        <!-- 3. Chat de IA -->
-                        <div class="item-caracteristica-solucion">
+                        <div class="item-caracteristica-solucion" data-aos="fade-left">
                             <div class="div-icono-caracteristica">
                                 <i class="ri-magic-line"></i>
                             </div>
@@ -230,8 +233,7 @@
                             </div>
                         </div>
 
-                        <!-- 4. Analíticas de Salud -->
-                        <div class="item-caracteristica-solucion">
+                        <div class="item-caracteristica-solucion" data-aos="fade-left">
                             <div class="div-icono-caracteristica">
                                 <i class="ri-microscope-line"></i>
                             </div>
@@ -243,8 +245,7 @@
                             </div>
                         </div>
 
-                        <!-- 5. Entrenamientos Pro -->
-                        <div class="item-caracteristica-solucion">
+                        <div class="item-caracteristica-solucion" data-aos="fade-left">
                             <div class="div-icono-caracteristica">
                                 <i class="ri-heart-pulse-line"></i>
                             </div>
@@ -256,7 +257,6 @@
                             </div>
                         </div>
 
-                        <!-- 6. Tracker Nutricional -->
                         <div class="item-caracteristica-solucion">
                             <div class="div-icono-caracteristica">
                                 <i class="ri-scales-3-line"></i>
@@ -278,7 +278,7 @@
 
             <div class="contenedor-beneficios container">
 
-                <div class="parte-izquierda-beneficios">
+                <div class="parte-izquierda-beneficios" data-aos="fade-left">
                     <div class="encabezado-seccion encabezado-beneficio">
                         <span class="etiqueta-seccion">LOS BENEFICIOS</span>
                         <h2 class="titulo-beneficios">Olvidate de tener 20 apps para hacer una dieta</h2>
@@ -293,8 +293,7 @@
                 <!-- Lista de Beneficios -->
                 <div class="parte-derecha-beneficios">
 
-                    <!-- Beneficio 1: Ahorro de tiempo -->
-                    <div class="fila-beneficio" data-step="1">
+                    <div class="fila-beneficio" data-aos="fade-right" data-step="1">
                         <div class="div-icono-beneficio">
                             <i class="ri-time-line"></i>
                         </div>
@@ -306,8 +305,7 @@
                         </div>
                     </div>
 
-                    <!-- Beneficio 2: Más adherencia -->
-                    <div class="fila-beneficio" data-step="2">
+                    <div class="fila-beneficio" data-aos="fade-right" data-step="2">
                         <div class="div-icono-beneficio">
                             <i class="ri-user-heart-line"></i>
                         </div>
@@ -319,8 +317,7 @@
                         </div>
                     </div>
 
-                    <!-- Beneficio 3: Datos precisos -->
-                    <div class="fila-beneficio" data-step="3">
+                    <div class="fila-beneficio" data-aos="fade-right" data-step="3">
                         <div class="div-icono-beneficio">
                             <i class="ri-bar-chart-box-line"></i>
                         </div>
@@ -332,8 +329,7 @@
                         </div>
                     </div>
 
-                    <!-- Beneficio 4: Imagen Premium -->
-                    <div class="fila-beneficio" data-step="4">
+                    <div class="fila-beneficio" data-aos="fade-right" data-step="4">
                         <div class="div-icono-beneficio">
                             <i class="ri-vip-crown-line"></i>
                         </div>
@@ -349,7 +345,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN: PROCESO (CÓMO FUNCIONA) -->
+        <!-- SECCIÓN: PROCESO -->
         <section class="seccion-proceso container-alternos" id="proceso">
             <div class="container">
                 <!-- Encabezado de la sección -->
@@ -361,7 +357,7 @@
 
                 <div class="contenedor-pasos-proceso">
 
-                    <!-- Paso 1: Texto Izq | Imagen Der -->
+
                     <div class="fila-proceso">
                         <div class="contenido-proceso">
                             <span class="numero-paso">01</span>
@@ -377,7 +373,7 @@
                         </div>
                     </div>
 
-                    <!-- Paso 2 -->
+
                     <div class="fila-proceso fila-invertida">
                         <div class="contenido-proceso">
                             <span class="numero-paso">02</span>
@@ -393,7 +389,7 @@
                         </div>
                     </div>
 
-                    <!-- Paso 3 -->
+
                     <div class="fila-proceso">
                         <div class="contenido-proceso">
                             <span class="numero-paso">03</span>
@@ -421,14 +417,13 @@
                     <p class="texto-servicios">Desde el seguimiento personal hasta la gestión profesional, NutriFit
                         centraliza todas las herramientas para optimizar resultados.</p>
 
-                    <!-- Botones / Tabs -->
                     <div class="container-btn-servicios">
                         <button class="btn-tab-servicio btn-activo" id="btn-tab-usuario">Ver funciones Usuario</button>
                         <button class="btn-tab-servicio" id="btn-tab-profesional">Ver funciones Profesional</button>
                     </div>
                 </div>
 
-                <!-- Parte Abajo: Contenedores de las pestañas -->
+                <!-- contenedores de las pestañas -->
                 <div class="contenedor-contenido-servicios">
 
                     <!-- Pestaña: Usuarios -->
@@ -512,10 +507,8 @@
 
                             </div>
 
-                            <!-- Derecha: Imagen representativa -->
                             <div class="imagen-panel-servicio">
                                 <div class="envoltura-imagen-servicio">
-                                    <!-- Usamos una imagen de placeholder, la cambiaremos cuando tengamos la real -->
                                     <img src="img/img-funcionalidades-usuario.webp"
                                         alt="Funciones para Usuarios NutriFit">
                                 </div>
@@ -534,7 +527,6 @@
                                 </div>
                             </div>
 
-                            <!-- Derecha: Lista de funciones -->
                             <div class="lista-funciones-servicio">
 
                                 <div class="item-funcion-servicio">
@@ -615,21 +607,19 @@
                     <h2 class="titulo-precios">Precios</h2>
                     <p class="texto-precios">Elige el plan que mejor se adapte a tus necesidades y objetivos.</p>
 
-                    <!-- Botones / Tabs de Precios -->
                     <div class="container-btn-servicios">
                         <button class="btn-tab-servicio btn-activo" id="btn-precio-usuario">Ver Precios Usuario</button>
                         <button class="btn-tab-servicio" id="btn-precio-profesional">Ver Precios Profesional</button>
                     </div>
                 </div>
 
-                <!-- Contenedores de Tablas de Precios -->
                 <div class="contenedor-contenido-precios">
 
-                    <!-- Panel: Precios Usuarios -->
+                    <!-- precios Usuarios -->
                     <div class="panel-precio" id="panel-precio-usuario">
                         <div class="grid-precios">
                             <!-- Plan Básico Usuario -->
-                            <article class="tarjeta-precio">
+                            <article class="tarjeta-precio" data-aos="fade-up">
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan Básico</h3>
                                     <div class="precio-plan">
@@ -644,8 +634,7 @@
                                 <a href="#" class="btn-esquema btn-plan">Empezar Gratis</a>
                             </article>
 
-                            <!-- Plan Pro Usuario -->
-                            <article class="tarjeta-precio destacado">
+                            <article class="tarjeta-precio destacado" data-aos="fade-up" data-aos-delay="200">
                                 <span class="etiqueta-destacado">RECOMENDADO</span>
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan Pro</h3>
@@ -662,8 +651,7 @@
                                 <a href="#" class="btn-esquema btn-plan-pro">Elegir Plan</a>
                             </article>
 
-                            <!-- Plan PremiumFit Usuario -->
-                            <article class="tarjeta-precio">
+                            <article class="tarjeta-precio" data-aos="fade-up" data-aos-delay="400">
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan PremiumFit</h3>
                                     <div class="precio-plan">
@@ -680,10 +668,10 @@
                         </div>
                     </div>
 
-                    <!-- Panel: Precios Profesionales (Oculto por defecto) -->
+                    <!-- precios Profesionales -->
                     <div class="panel-precio oculto" id="panel-precio-profesional">
                         <div class="grid-precios">
-                            <!-- Plan Básico Profesional -->
+
                             <article class="tarjeta-precio">
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan Básico</h3>
@@ -699,7 +687,6 @@
                                 <a href="#" class="btn-esquema btn-plan">Elegir Plan</a>
                             </article>
 
-                            <!-- Plan NutriFit Pro Profesional -->
                             <article class="tarjeta-precio destacado">
                                 <span class="etiqueta-destacado">MÁS POPULAR</span>
                                 <div class="cabecera-precio">
@@ -717,7 +704,7 @@
                                 <a href="#" class="btn-esquema btn-plan-pro">Elegir Plan</a>
                             </article>
 
-                            <!-- Plan Experto Profesional -->
+
                             <article class="tarjeta-precio">
                                 <div class="cabecera-precio">
                                     <h3 class="nombre-plan">Plan Experto</h3>
@@ -738,7 +725,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN: FAQ (Preguntas Frecuentes) -->
+        <!-- SECCIÓN: FAQ -->
         <section class="seccion-faq" id="faq">
             <div class="container-faq container">
                 <div class="encabezado-seccion text-center">
@@ -886,7 +873,7 @@
         <!-- SECCIÓN: CTA FINAL -->
         <section class="seccion-cta-final container-alternos">
             <div class="container-cta container">
-                <div class="contenido-cta text-center">
+                <div class="contenido-cta text-center" data-aos="fade-down">
                     <h2 class="titulo-cta">Pásate a la nutrición inteligente.</h2>
                     <p class="texto-cta">Deja atrás los procesos manuales y ahorra tiempo hoy.</p>
                     <div class="grupo-botones-cta">
@@ -936,14 +923,17 @@
                 </div>
             </div>
 
-            <!-- Parte inferior: Copyright -->
             <div class="footer-abajo">
                 <p>&copy; 2026 NutriFit Systems. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
-    <!-- Esto trae las funciones de Lenis a tu web -->
+
+    <!-- libreriía lenis (scroll)-->
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- animaciones de scroll la libreriía AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="javascript.js"></script>
 </body>

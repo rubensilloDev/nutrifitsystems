@@ -48,25 +48,6 @@
 }
 
 /* Reajuste de tamaños de fuente para Tablet */
-@media (max-width: 1024px) {
-    :root {
-        --fs-h1: 3rem;
-        --fs-h2: 2.2rem;
-        --fs-h3: 1.5rem;
-        --fs-p: 1.05rem;
-    }
-}
-
-/* Reajuste de tamaños de fuente para Móvil */
-@media (max-width: 768px) {
-    :root {
-        --fs-h1: 2.2rem;
-        --fs-h2: 1.8rem;
-        --fs-h3: 1.3rem;
-        --fs-p: 1rem;
-        --fs-span: 0.85rem;
-    }
-}
 
 /* RESETEO Y ESTILOS BASE */
 * {
@@ -85,6 +66,12 @@ body {
     background-color: var(--clr-bg-main);
     color: var(--clr-text);
     overflow-x: hidden;
+}
+
+/* estilos cuando se selecciona algo para copiar o pegar*/
+::selection {
+    background-color: var(--clr-accent-soft);
+    color: var(--clr-text);
 }
 
 /* Aplicación de variables de fuente a etiquetas globales */
@@ -146,14 +133,6 @@ img {
     display: block;
 }
 
-/* Secciones con fondo secundario (Gris/Verde muy suave) */
-.contenedor-hero,
-.solution-section,
-.process-section {
-    background: #2E7D32;
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(129, 199, 132, 1) 100%);
-}
-
 /* COMPONENTES REUTILIZABLES */
 
 /* Estilo base para todos los botones del sitio */
@@ -191,11 +170,13 @@ img {
     color: var(--clr-primary);
     border: 2px solid var(--clr-primary);
     background-color: transparent;
+    transition: all 0.3s ease;
 }
 
 /* Efecto hover del botón secundario */
 .btn-secundario:hover {
     color: var(--clr-primary-dark);
+    transform: translateY(-3px);
 }
 
 .btn-esquema {
@@ -347,6 +328,7 @@ img {
     display: flex;
     align-items: center;
     padding: var(--space-8) 5% var(--space-4);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(129, 199, 132, 1) 100%);
 }
 
 /* Grid que organiza el contenido textual y la imagen */
@@ -1400,24 +1382,74 @@ img {
     }
 }
 
-/* Animación de flotado vertical (Sube y baja suavemente) */
-@keyframes floatVertical {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-0.9375rem);
-        /* 15px */
-    }
-}
 
 /* Ajustes responsivos para tablets */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+
+    :root {
+        --fs-h1: 3rem;
+        --fs-h2: 2.2rem;
+        --fs-h3: 1.5rem;
+        --fs-p: 1.05rem;
+    }
+
+
     .contenido-hero {
         gap: var(--space-4);
+    }
+
+
+    /* 1. Reducimos el ancho máximo para que respire por los lados */
+    .container {
+        max-width: 90%;
+    }
+
+    /* 2. Las grillas de 3 columnas pasan a 2 columnas */
+    .grid-problema {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .grid-precios {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tarjeta-precio:last-of-type {
+        grid-column: 1 / 3;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    /* 3. Ajustamos el Hero para que la imagen no se coma el texto */
+    .contenido-hero {
+        grid-template-columns: 1fr;
+        /* Mantenemos 2 columnas pero equilibradas */
+        gap: var(--space-4);
+        align-items: center;
+    }
+
+    /* 4. Solución y Beneficios: Le damos más espacio al texto */
+    .contenedor-solucion,
+    .contenedor-beneficios {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .item-caracteristica-solucion,
+    .fila-beneficio {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* responsive de las funcionalidades */
+
+    .grid-panel-servicio {
+        grid-template-columns: 1fr;
+    }
+
+    /* para que la imagen este siempre abajo y las tarjetas arriba */
+    .imagen-panel-servicio {
+        order: 2;
     }
 }
 
@@ -1680,10 +1712,36 @@ img {
     }
 
     /* Responsive de la seccion de planes */
-
     .grid-precios {
         grid-template-columns: 1fr;
-
     }
 
+    .tarjeta-precio:last-of-type {
+        grid-column: 1 / 1;
+        width: 100%;
+    }
+
+    /* Responsive del CTA */
+
+    .contenido-cta {
+        width: 100%;
+    }
+
+    .titulo-cta {
+        font-size: var(--fs-h2);
+    }
+
+    .texto-cta {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    /* responsive del footer */
+    .grid-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-abajo {
+        text-align: center;
+    }
 }
