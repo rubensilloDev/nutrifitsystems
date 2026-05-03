@@ -133,6 +133,10 @@ img {
     display: block;
 }
 
+section {
+    overflow-x: hidden;
+}
+
 /* COMPONENTES REUTILIZABLES */
 
 /* estilos a los contenedores que van a tener el fondo diferente*/
