@@ -1210,7 +1210,7 @@ img {
 
 /* icono X */
 .icono-faq-cerrar span:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(135deg);
 }
 
 .icono-faq-cerrar span:nth-child(2) {
@@ -1803,11 +1803,12 @@ img {
 
     .titulo-cta {
         font-size: var(--fs-h2);
+        width: 95%;
     }
 
     .texto-cta {
         font-size: var(--fs-p);
-        width: 95%;
+        width: 85%;
     }
 
     /* responsive del footer */
