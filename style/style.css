@@ -1295,6 +1295,7 @@ section {
 }
 
 .item-contacto p {
+    word-break: break-all;
     color: var(--clr-text-light);
     font-size: 0.95rem;
 }
@@ -1329,7 +1330,7 @@ section {
     justify-content: center;
     align-items: center;
     color: white;
-    max-width: 80%;
+    max-width: 90%;
     text-align: center;
     margin: 0 auto;
 }
@@ -1899,7 +1900,7 @@ section {
 
     .texto-cta {
         font-size: 1rem;
-        width: 90%;
+        width: 95%;
     }
 
     /* responsive del footer */
