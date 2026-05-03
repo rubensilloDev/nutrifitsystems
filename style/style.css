@@ -1861,6 +1861,10 @@ section {
         gap: 10px;
     }
 
+    .pregunta-faq {
+        width: 85%;
+    }
+
     /*responsive de la seccion de contacto*/
 
     .grid-contacto {
