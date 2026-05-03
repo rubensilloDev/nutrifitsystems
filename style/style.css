@@ -1181,6 +1181,10 @@ img {
     display: block;
     background-color: var(--clr-primary);
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-shrink: 0;
     transition: transform 0.3s ease;
 }
 
@@ -1445,6 +1449,72 @@ img {
     opacity: 0.5;
 }
 
+/* ESTILOS A LAS PÁGINAS LEGALES */
+
+/* Contenedor principal de la página legal */
+.seccion-legal {
+    padding: 5rem 0;
+}
+
+/* Estilos del encabezado (Título y fecha) */
+.encabezado-legal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.titulo-legal {
+    font-size: var(--fs-h1);
+    color: var(--clr-text);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.fecha-legal {
+    font-size: 0.95rem;
+    color: var(--clr-text-light);
+    opacity: 0.8;
+}
+
+/* Estilos del contenido de texto legal */
+.cuerpo-legal {
+    max-width: 800px;
+    background-color: rgba(129, 199, 132, 0.3);
+    box-shadow: 0px 0px 10px 0px rgba(129, 199, 132, 0.5);
+    padding: 20px 40px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.texto-cuerpo-legal h2 {
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    margin: 2.5rem 0 1rem;
+}
+
+.texto-cuerpo-legal p {
+    line-height: 1.8;
+    color: var(--clr-text-light);
+    margin-bottom: 1.5rem;
+}
+
+.texto-cuerpo-legal ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.texto-cuerpo-legal li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--clr-text-light);
+}
+
+.texto-cuerpo-legal strong {
+    color: var(--clr-text);
+}
+
 /* ANIMACIONES */
 /* Animación de desplazamiento infinito de izquierda a derecha */
 @keyframes scrollForward {
@@ -1456,6 +1526,8 @@ img {
         transform: translateX(0);
     }
 }
+
+/**/
 
 
 /* Ajustes responsivos para tablets */
@@ -1785,13 +1857,32 @@ img {
         gap: 10px;
     }
 
+    /*responsive de la seccion de contacto*/
+
+    .grid-contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .parte-izquierda-contacto {
+        order: 1;
+    }
+
+    .parte-derecha-contacto {
+        order: 2;
+    }
+
+    .col-mapa-contacto {
+        width: 85%;
+        margin: 0 auto;
+    }
+
     /* Responsive del CTA */
     .seccion-cta-final {
         width: 100%;
     }
 
     .contenido-cta {
-        width: 90%;
+        width: 100%;
     }
 
     .titulo-cta {
