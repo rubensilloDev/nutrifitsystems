@@ -65,7 +65,11 @@ body {
     font-family: var(--ff-body);
     background-color: var(--clr-bg-main);
     color: var(--clr-text);
-    overflow-x: hidden;
+}
+
+body,
+html {
+    overflow-x: clip;
 }
 
 /* estilos cuando se selecciona algo para copiar o pegar*/
@@ -131,10 +135,6 @@ ul {
 img {
     max-width: 100%;
     display: block;
-}
-
-section {
-    overflow-x: hidden;
 }
 
 /* COMPONENTES REUTILIZABLES */
