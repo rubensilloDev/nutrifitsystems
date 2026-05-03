@@ -1562,10 +1562,13 @@ img {
         opacity: 0;
         visibility: hidden;
         flex-direction: column;
+        justify-content: center;
         position: absolute;
-        width: 100%;
-        top: 100%;
-        right: 0;
+        width: 100vw;
+        /* cocupa todo el ancho de la pantalla*/
+        top: -25%;
+        left: 50%;
+        /* lo ponemos que empieze al 50% de la izquierda del contenedor padre*/
         height: 0;
         z-index: 100;
         background-color: var(--clr-white);
@@ -1573,7 +1576,26 @@ img {
         border-radius: var(--radius-lg);
         box-shadow: var(--shadow-md);
         transition: all 0.5s ease;
-        transform: translateY(-50px);
+        transform: translateX(-50%) translateY(-50px);
+        /* y lo centramos */
+    }
+
+    .menu-navegacion li a {
+        font-size: var(--fs-h2);
+        font-weight: bold;
+    }
+
+    .acciones-navegacion a {
+        font-size: var(--fs-h4);
+    }
+
+
+    .menu-navegacion a::after {
+        display: none;
+    }
+
+    .logo-navegacion {
+        z-index: 1001;
     }
 
     /* cuando este abierto el pongo el opacity y el visibility bien pa que haga la animacion */
@@ -1582,6 +1604,7 @@ img {
         visibility: visible;
         transform: translateY(0);
         height: 80vh;
+        transform: translateX(-50%) translateY(0);
     }
 
     .menu-navegacion,
@@ -1626,18 +1649,8 @@ img {
 
     /* El hero pasa a ser una sola columna centrada */
     .contenido-hero {
-        grid-template-columns: 1fr;
         text-align: center;
         padding-top: var(--space-6);
-    }
-
-    .hero-derecho {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    .botones-hero {
-        justify-content: center;
     }
 
     /* img del hero del movil */
@@ -1668,8 +1681,7 @@ img {
         margin-bottom: var(--space-2);
     }
 
-
-    /* adaptado del movil a la solucion */
+    /* responsive de la sección solución */
     .contenedor-solucion {
         grid-template-columns: 1fr;
     }
@@ -1704,12 +1716,6 @@ img {
         order: 2;
     }
 
-    /* El wrapper interno ya no necesita ser sticky en móvil */
-    .envoltura-numero-fijo {
-        position: relative;
-        top: 0;
-    }
-
     /* rESPONSIVE DE LA SECCION DE EL PROCESO*/
     .fila-proceso {
         grid-template-columns: 1fr;
@@ -1740,6 +1746,9 @@ img {
     }
 
     /* Responsive de la seccion de los servicios*/
+    .container-servicios {
+        padding-top: var(--space-4);
+    }
 
     .imagen-panel-servicio {
         position: relative;
@@ -1756,6 +1765,14 @@ img {
     /* Responsive de la seccion de planes */
     .grid-precios {
         grid-template-columns: 1fr;
+    }
+
+    .destacado {
+        transform: scale(1.03);
+    }
+
+    .destacado:hover {
+        transform: scale(1.05);
     }
 
     .tarjeta-precio:last-of-type {
@@ -1802,7 +1819,7 @@ img {
     }
 
     .titulo-cta {
-        font-size: var(--fs-h2);
+        font-size: var(--fs-h1);
         width: 95%;
     }
 
@@ -1819,14 +1836,4 @@ img {
     .footer-abajo {
         text-align: center;
     }
-}
-
-/* 
-   MAZO MAESTRO: Forzamos el tiempo de transición 
-   específicamente cuando AOS ya ha terminado de animar.
-*/
-.tarjeta-problema[data-aos].aos-animate:hover,
-.item-caracteristica-solucion[data-aos].aos-animate:hover,
-.fila-beneficio[data-aos].aos-animate:hover {
-    transition-duration: 0.3s;
 }

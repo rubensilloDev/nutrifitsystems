@@ -62,7 +62,7 @@
         <!-- SECCIÓN: HERO -->
         <section class="contenedor-hero" id="hero">
             <div class="contenido-hero">
-                <div class="hero-izquierdo">
+                <div class="hero-contendor-texto">
                     <h1 class="titulo-hero" data-aos="fade-down"><span
                             class="palabras-importantes importante-h1">NutriFit:</span><br>Control
                         total de la
@@ -76,7 +76,7 @@
                         <a href="#proceso" class="btn-esquema btn-esquema-hero" data-aos="fade-left">Ver demo</a>
                     </div>
                 </div>
-                <div class="hero-derecho">
+                <div class="hero-contenedor-imagen">
                     <div class="envoltura-imagen-hero">
                         <img src="./img/img-hero.webp" alt="Dashboard de NutriFit" class="img-hero" data-aos="fade-up">
                         <img src="./img/img-hero-movil.png" alt="Dashboard de NutriFit" class="img-hero-movil"
@@ -402,193 +402,191 @@
             </div>
         </section>
         <!-- SECCIÓN: SERVICIOS -->
-        <section class="seccion-servicios" id="servicios">
-            <div class="container-servicios container">
-                <div class="encabezado-seccion text-center">
-                    <span class="etiqueta-seccion">FUNCIONALIDADES</span>
-                    <h2 class="titulo-servicios">Todo lo que necesitas, en una sola plataforma.</h2>
-                    <p class="texto-servicios">Desde el seguimiento personal hasta la gestión profesional, NutriFit
-                        centraliza todas las herramientas para optimizar resultados.</p>
+        <div class="container-servicios container">
+            <div class="encabezado-seccion text-center">
+                <span class="etiqueta-seccion">FUNCIONALIDADES</span>
+                <h2 class="titulo-servicios">Todo lo que necesitas, en una sola plataforma.</h2>
+                <p class="texto-servicios">Desde el seguimiento personal hasta la gestión profesional, NutriFit
+                    centraliza todas las herramientas para optimizar resultados.</p>
 
-                    <div class="container-btn-servicios">
-                        <button class="btn-tab-servicio btn-activo" id="btn-tab-usuario">Ver funciones Usuario</button>
-                        <button class="btn-tab-servicio" id="btn-tab-profesional">Ver funciones Profesional</button>
-                    </div>
-                </div>
-
-                <div class="contenedor-contenido-servicios">
-
-                    <!-- Pestaña: Usuarios -->
-                    <div class="panel-servicio" id="panel-usuario">
-                        <div class="grid-panel-servicio">
-                            <div class="lista-funciones-servicio">
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio">
-                                        <i class="ri-dashboard-line"></i>
-                                    </div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Control diario</h4>
-                                        <p class="texto-funcion">Dashboard con resumen de calorías, entrenamientos y
-                                            progreso en tiempo real.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-restaurant-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Seguimiento nutricional</h4>
-                                        <p class="texto-funcion">Registra tus comidas y controla tus calorías de forma
-                                            sencilla.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-run-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Entrenamientos</h4>
-                                        <p class="texto-funcion">Registra rutinas, series, repeticiones, cargas y
-                                            evolución.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-line-chart-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Progreso visual</h4>
-                                        <p class="texto-funcion">Analiza tu evolución con gráficas y mejoras
-                                            porcentuales.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-scales-3-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Seguimiento físico</h4>
-                                        <p class="texto-funcion">Controla tu peso y cambios corporales a lo largo del
-                                            tiempo.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-file-list-3-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Plan personalizado</h4>
-                                        <p class="texto-funcion">Accede a tu dieta y entrenamiento asignado en todo
-                                            momento.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-chat-1-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Chat directo</h4>
-                                        <p class="texto-funcion">Comunícate fácilmente con tu entrenador o
-                                            nutricionista.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-robot-2-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Asistente IA</h4>
-                                        <p class="texto-funcion">Resuelve dudas sobre nutrición y entrenamiento al
-                                            instante.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="imagen-panel-servicio">
-                                <div class="envoltura-imagen-servicio">
-                                    <img src="img/img-funcionalidades-usuario.webp"
-                                        alt="Funciones para Usuarios NutriFit">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pestaña: Profesionales -->
-                    <div class="panel-servicio oculto" id="panel-profesional">
-                        <div class="grid-panel-servicio panel-invertido">
-
-                            <div class="imagen-panel-servicio">
-                                <div class="envoltura-imagen-servicio">
-                                    <img src="img/img-funcionalidades-usuario.webp"
-                                        alt="Funciones para Profesionales NutriFit">
-                                </div>
-                            </div>
-
-                            <div class="lista-funciones-servicio">
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-group-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Gestión de clientes</h4>
-                                        <p class="texto-funcion">Organiza y accede a todos tus clientes desde un único
-                                            panel.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-folder-user-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Ficha completa</h4>
-                                        <p class="texto-funcion">Consulta datos, objetivos, progreso y analíticas en un
-                                            solo lugar.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-restaurant-fill"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Planificación nutricional</h4>
-                                        <p class="texto-funcion">Crea y ajusta dietas de forma rápida y flexible.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-heart-pulse-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Programación de entrenamientos</h4>
-                                        <p class="texto-funcion">Diseña rutinas y realiza seguimiento del rendimiento.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-bar-chart-box-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Análisis avanzado</h4>
-                                        <p class="texto-funcion">Evalúa resultados y toma decisiones basadas en datos
-                                            reales.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-chat-smile-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">Chat integrado</h4>
-                                        <p class="texto-funcion">Comunícate directamente con cada cliente sin salir de
-                                            la plataforma.</p>
-                                    </div>
-                                </div>
-
-                                <div class="item-funcion-servicio">
-                                    <div class="div-icono-servicio"><i class="ri-brain-line"></i></div>
-                                    <div class="contenido-funcion-servicio">
-                                        <h4 class="titulo-funcion">IA contextual</h4>
-                                        <p class="texto-funcion">Consulta información y recibe ayuda basada en los datos
-                                            de cada cliente.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="container-btn-servicios">
+                    <button class="btn-tab-servicio btn-activo" id="btn-tab-usuario">Ver funciones Usuario</button>
+                    <button class="btn-tab-servicio" id="btn-tab-profesional">Ver funciones Profesional</button>
                 </div>
             </div>
+
+            <div class="contenedor-contenido-servicios">
+
+                <!-- Pestaña: Usuarios -->
+                <div class="panel-servicio" id="panel-usuario">
+                    <div class="grid-panel-servicio">
+                        <div class="lista-funciones-servicio">
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio">
+                                    <i class="ri-dashboard-line"></i>
+                                </div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Control diario</h4>
+                                    <p class="texto-funcion">Dashboard con resumen de calorías, entrenamientos y
+                                        progreso en tiempo real.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-restaurant-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Seguimiento nutricional</h4>
+                                    <p class="texto-funcion">Registra tus comidas y controla tus calorías de forma
+                                        sencilla.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-run-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Entrenamientos</h4>
+                                    <p class="texto-funcion">Registra rutinas, series, repeticiones, cargas y
+                                        evolución.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-line-chart-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Progreso visual</h4>
+                                    <p class="texto-funcion">Analiza tu evolución con gráficas y mejoras
+                                        porcentuales.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-scales-3-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Seguimiento físico</h4>
+                                    <p class="texto-funcion">Controla tu peso y cambios corporales a lo largo del
+                                        tiempo.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-file-list-3-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Plan personalizado</h4>
+                                    <p class="texto-funcion">Accede a tu dieta y entrenamiento asignado en todo
+                                        momento.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-chat-1-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Chat directo</h4>
+                                    <p class="texto-funcion">Comunícate fácilmente con tu entrenador o
+                                        nutricionista.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-robot-2-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Asistente IA</h4>
+                                    <p class="texto-funcion">Resuelve dudas sobre nutrición y entrenamiento al
+                                        instante.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="imagen-panel-servicio">
+                            <div class="envoltura-imagen-servicio">
+                                <img src="img/img-funcionalidades-usuario.webp" alt="Funciones para Usuarios NutriFit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pestaña: Profesionales -->
+                <div class="panel-servicio oculto" id="panel-profesional">
+                    <div class="grid-panel-servicio panel-invertido">
+
+                        <div class="imagen-panel-servicio">
+                            <div class="envoltura-imagen-servicio">
+                                <img src="img/img-funcionalidades-usuario.webp"
+                                    alt="Funciones para Profesionales NutriFit">
+                            </div>
+                        </div>
+
+                        <div class="lista-funciones-servicio">
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-group-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Gestión de clientes</h4>
+                                    <p class="texto-funcion">Organiza y accede a todos tus clientes desde un único
+                                        panel.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-folder-user-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Ficha completa</h4>
+                                    <p class="texto-funcion">Consulta datos, objetivos, progreso y analíticas en un
+                                        solo lugar.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-restaurant-fill"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Planificación nutricional</h4>
+                                    <p class="texto-funcion">Crea y ajusta dietas de forma rápida y flexible.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-heart-pulse-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Programación de entrenamientos</h4>
+                                    <p class="texto-funcion">Diseña rutinas y realiza seguimiento del rendimiento.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-bar-chart-box-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Análisis avanzado</h4>
+                                    <p class="texto-funcion">Evalúa resultados y toma decisiones basadas en datos
+                                        reales.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-chat-smile-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">Chat integrado</h4>
+                                    <p class="texto-funcion">Comunícate directamente con cada cliente sin salir de
+                                        la plataforma.</p>
+                                </div>
+                            </div>
+
+                            <div class="item-funcion-servicio">
+                                <div class="div-icono-servicio"><i class="ri-brain-line"></i></div>
+                                <div class="contenido-funcion-servicio">
+                                    <h4 class="titulo-funcion">IA contextual</h4>
+                                    <p class="texto-funcion">Consulta información y recibe ayuda basada en los datos
+                                        de cada cliente.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         </section>
 
         <!-- SECCIÓN: PRECIOS -->
