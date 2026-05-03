@@ -344,6 +344,12 @@ img {
     margin: 0 auto;
 }
 
+.hero-contenedor {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 /* Bloque de texto a la izquierda */
 .hero-izquierdo {
     text-align: center;
@@ -352,6 +358,7 @@ img {
 
 /* Título principal H1 del Hero */
 .titulo-hero {
+    text-align: center;
     line-height: 1.1;
     margin-bottom: var(--space-3);
     color: var(--clr-text);
@@ -359,6 +366,7 @@ img {
 
 /* Párrafo descriptivo del Hero */
 .texto-hero {
+    text-align: center;
     margin-bottom: var(--space-4);
     opacity: 0.9;
     max-width: 90%;
