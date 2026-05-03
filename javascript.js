@@ -112,3 +112,5 @@ AOS.init({
 lenis.on('scroll', () => {
     AOS.refresh();
 });
+
+

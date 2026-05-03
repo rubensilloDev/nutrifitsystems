@@ -1,0 +1,192 @@
+﻿
+LineNumber Line                                                                                                        
+---------- ----                                                                                                        
+         3 /* TOKENS DE DISEÑO Y VARIABLES (Define los colores, tipografías y escalas globales) */                     
+         5     /* Colores Principales */                                                                               
+        14     /* Configuración del Efecto Glassmorphism */                                                            
+        18     /* Tipografías */                                                                                       
+        22     /* Tamaños de Fuente */                                                                                 
+        32     /* espacioados reutilizables */                                                                         
+        40     /* Sombras */                                                                                           
+        45     /* Transiciones */                                                                                      
+        50 /* Reajuste de tamaños de fuente para Tablet */                                                             
+        52 /* RESETEO Y ESTILOS BASE */                                                                                
+        71 /* estilos cuando se selecciona algo para copiar o pegar*/                                                  
+        77 /* Aplicación de variables de fuente a etiquetas globales */                                                
+       118 /* Estilos básicos para enlaces */                                                                          
+       125 /* Quitar puntos de las listas */                                                                           
+       130 /* Asegurar que las imágenes sean responsivas */                                                            
+       136 /* COMPONENTES REUTILIZABLES */                                                                             
+       138 /* estilos a los contenedores que van a tener el fondo diferente*/                                          
+       143 /* Estilo base para todos los botones del sitio */                                                          
+       156 /* Botón principal (Verde sólido) */                                                                        
+       164 /* Efecto hover del botón principal */                                                                      
+       171 /* Botón secundario  */                                                                                     
+       181 /* Efecto hover del botón secundario */                                                                     
+       192 /* Efecto hover del botón de esquema */                                                                     
+       198 /* efecto de que como que se rellena el boton por dentro*/                                                  
+       217 /* para que se active el after al hacer hover*/                                                             
+       223 /* palabras destacadas */                                                                                   
+       229 /* palabras importantes del titulo del hero */                                                              
+       237 /* NAVEGACIÓN */                                                                                            
+       238 /* Contenedor fijo que mantiene la barra de navegación arriba */                                            
+       248 /* barra de navegación con fondo borrroso */                                                                
+       263 /* Estilos para el logo dentro de la navegación */                                                          
+       269 /* contenedor que tiene los botones y los enlaces de navegación */                                          
+       276 /* El menú de enlaces principales */                                                                        
+       282 /* Estilos individuales para cada enlace del menú */                                                        
+       291 /* la linea debajo de cada link*/                                                                           
+       304 /* Efecto hover de los enlaces de navegación */                                                             
+       316 /* Contenedor de botones de login y reserva en la nav */                                                    
+       323 /* Ajustes de tamaño para los botones específicos de la navegación */                                       
+       328 /* SECCIÓN: HERO (Inicio de página) */                                                                      
+       330 /* Contenedor principal de la sección Hero */                                                               
+       339 /* Grid que organiza el contenido textual y la imagen */                                                    
+       350 /* Bloque de texto a la izquierda */                                                                        
+       356 /* Título principal H1 del Hero */                                                                          
+       363 /* Párrafo descriptivo del Hero */                                                                          
+       370 /* Grupo de botones principales de acción */                                                                
+       377 /* estilos al boton del cta del hero*/                                                                      
+       383 /* Bloque de imagen y elementos flotantes a la derecha */                                                   
+       388 /* Estilos de la imagen principal */                                                                        
+       398 /* SECCIÓN: CARACTERÍSTICAS */                                                                              
+       400 /* Contenedor principal del carrusel con fondo verde */                                                     
+       405     /* evito que desborde por los lados */                                                                  
+       411 /* Sombras negras en los extremos */                                                                        
+       423 /* Sombra izquierda */                                                                                      
+       429 /* Sombra derecha */                                                                                        
+       435 /* Carril que contiene los elementos y ejecuta la animación */                                              
+       443 /* Estilo individual de cada característica dentro del carrusel */                                          
+       452 /* Iconos de las características en blanco con opacidad suave */                                            
+       460 /* Texto de la característica con tipografía Nunito */                                                      
+       469 /* ESTILOS DE SECCIÓN GENERALES */                                                                          
+       471 /* Contenedor centralizado para mantener el ancho de lectura */                                             
+       478 /* Encabezado de sección común (Centrado) */                                                                
+       485 /* span sobre el título H2 */                                                                               
+       500 /* SECCIÓN: PROBLEMA */                                                                                     
+       502 /* Espaciado general de la sección problema */                                                              
+       508 /* Título de la sección problema */                                                                         
+       513 /* Texto introductorio de la sección problema */                                                            
+       519 /* Grid que organiza las 3 tarjetas de problemas */                                                         
+       527 /* Estilo individual de cada tarjeta de problema */                                                         
+       539 /* Efecto hover en las tarjetas: elevación y sombra más profunda */                                         
+       546 /* caja de los iconos */                                                                                    
+       567 /* Título  H3 de cada tarjeta */                                                                            
+       574 /* descripción  */                                                                                          
+       580 /* SECCIÓN: SOLUCIÓN */                                                                                     
+       582 /* Layout principal de la sección solución (Grid de 2 columnas) */                                          
+       588 /* Contenedor del grid de solución */                                                                       
+       596 /* estilos a la columan de la izquierda que se queda sticky */                                              
+       602 /* Título de la solución */                                                                                 
+       608 /* Contenedor de botones de perfil (Profesional/Usuario) */                                                 
+       614 /* Columna derecha: Lista de características en flex vertical */                                            
+       621 /* Cada ítem de característica (Fila horizontal) */                                                         
+       631 /* Efecto hover suave: sombreado y borde sutil */                                                           
+       638 /* estilos al div del icono de la seccion solucion y de la de beneficios */                                 
+       651     /* para que no se encoja */                                                                             
+       655 /* Cambio de color del icono al pasar el ratón sobre el ítem */                                             
+       662 /* Título interno de la característica */                                                                   
+       669 /* Descripción de la característica */                                                                      
+       676 /* hover de la desxripcion al pasar el cursor por el div */                                                 
+       681 /* SECCIÓN: BENEFICIOS */                                                                                   
+       688 /* estilos al contenedor de dentro de la seccion */                                                         
+       696 /* estilos a la columna de la derecha*/                                                                     
+       705 /* estilos al titulo y descripcion que esta en la columna derecha */                                        
+       717 /* estilos al span de el header de la seccion de beneficios*/                                               
+       720     /* tiene de ancho lo que ocupe el contenido */                                                          
+       722     /* para alineacion a la derecha */                                                                      
+       725 /* estilos al numero que esta sticky */                                                                     
+       735 /* estilos al numero "01" */                                                                                
+       741 /* estilos al conentedor de los beneficios */                                                               
+       750 /* estilos a cada contenedor de cada beneficio */                                                           
+       763 /* estilos para que se vayan acumulando como tarjetas y se forme como una baraja */                         
+       780 /* estilos al titulo del beneficio */                                                                       
+       787 /* estilos a la descripcion del beneficio */                                                                
+       793 /* estilos al titulo de los beneficios (el que esta sticky) */                                              
+       800 /* estilos al texto que esta debajo del titulo sticky */                                                    
+       806 /* estilos al cta de los beneficios */                                                                      
+       811 /* SECCION A "EL PROCESO" */                                                                                
+       816 /* estilos al div que tiene todos los pasos del proceso */                                                  
+       824 /* estilos a cada fila que es cada proceso*/                                                                
+       837 /* estilos a el texto de cada proceso */                                                                    
+       870 /* estilos al numero de los pasos */                                                                        
+       889 /* SECCIÓN SERVICIOS */                                                                                     
+       891 /* estilos al contenedor de servicios*/                                                                     
+       898 /* estilos al container de los botones*/                                                                    
+       907 /* estilos a cada boton*/                                                                                   
+       918 /* estilos al boton que tengo la clase activo (el cual va a mostar sus pestañas)*/                          
+       924 /* estilos de los botons al hacer hover (solo si no están activos) */                                       
+       931 /* estilos al contenedor de las pestañas y la imagen */                                                     
+       941 /* estilos al contenedor que tiene todos los item que tienen el icono y el texto */                         
+       949 /* estilos a cada servicio que tiene el icono + text */                                                     
+       959 /* estilos a cada contenedor de cada servicio */                                                            
+       973 /* estilos a cada contenedor de cada servicio al hacer hover */                                             
+       979 /* estilos al icono de cada servicio */                                                                     
+       984 /* estilos al conenedor de la imegn*/                                                                       
+      1010 /* lo ocultamos para las pestañas */                                                                        
+      1015 /* ANIMACIONES */                                                                                           
+      1017 /* Animación de desplazamiento infinito de izquierda a derecha */                                           
+      1028 /* Animación de flotado vertical (Sube y baja suavemente) */                                                
+      1038         /* 15px */                                                                                          
+      1043 /* SECCIÓN: PRECIOS */                                                                                      
+      1053 /* grid de las 3 tarjetas de precio */                                                                      
+      1062 /* estilos a cada tarejeta */                                                                               
+      1080 /* estilo a la tarjeta del plan recomendado*/                                                               
+      1100 /* estilos al boton del plan pro*/                                                                          
+      1110 /* estilos a las caracteristicas de cada plan */                                                            
+      1117 /* estilos al espan de "destacado" y "más popular"*/                                                        
+      1130 /* estilos a los precios */                                                                                 
+      1138 /* SECCIÓN FAQ */                                                                                           
+      1145 /* estilo al contenedor que tiene todas las preguntas*/                                                     
+      1154 /* contenedor que tiene la pregunta y la respuesta*/                                                        
+      1168 /* contenedor que tiene la pregunta y el icono */                                                           
+      1177 /* estilo al icono */                                                                                       
+      1185 /* Estilo común para ambos palitos */                                                                       
+      1193 /* Palito vertical */                                                                                       
+      1201 /* Palito horizontal */                                                                                     
+      1209 /* estilos a la pregunta (h3) */                                                                            
+      1215 /* estilos a las respuestas*/                                                                               
+      1227 /* estilos a las respuestas cuando esten vsidibles*/                                                        
+      1235 /* icono X */                                                                                               
+      1245 /* SECCIÓN: CONTACTO */                                                                                     
+      1250 /* estilos al grid que tiene la info y el iframe del mapa*/                                                 
+      1259 /* estilos a la columna e las filas de la informacion*/                                                     
+      1266 /* estilo a cada div que tiene el icono y la informacion*/                                                  
+      1300 /* estilos al contenedor del iframe*/                                                                       
+      1314 /* SECCIÓN: CTA FINAL */                                                                                    
+      1370 /* FOOTER */                                                                                                
+      1378 /* estilos a las columnas del footer */                                                                     
+      1386 /* estilos al logo */                                                                                       
+      1443 /* Footer Bottom */                                                                                         
+      1454 /* ANIMACIONES */                                                                                           
+      1455 /* Animación de desplazamiento infinito de izquierda a derecha */                                           
+      1467 /* Ajustes responsivos para tablets */                                                                      
+      1483     /* 1. Reducimos el ancho máximo para que respire por los lados */                                       
+      1488     /* 2. Las grillas de 3 columnas pasan a 2 columnas */                                                   
+      1504     /* responsive del hero en tablet */                                                                     
+      1511     /* responsive de Solución y Beneficios  */                                                              
+      1524     /* responsive de las funcionalidades */                                                                 
+      1529     /* para que la imagen este siempre abajo y las tarjetas arriba */                                       
+      1535 /* Ajustes responsivos para móviles */                                                                      
+      1538     /* volvemos ha hacer el root para que se apliquen aqui bien las font-sizces sin necesidad de volver a...
+      1551     /* Ocultamos el menú principal en móvil  */                                                             
+      1554         /* lo pongo con opacity 0 y visibiliti hidden pa que la animacion funcione al salir */              
+      1572     /* cuando este abierto el pongo el opacity y el visibility bien pa que haga la animacion */             
+      1589     /* menu movil */                                                                                        
+      1606     /* transformacion a x cuando se abra el menu*/                                                          
+      1621     /* El hero pasa a ser una sola columna centrada */                                                      
+      1642     /* img del hero del movil */                                                                            
+      1651     /* Reajuste de tarjetas flotantes en móvil para que no se salgan de pantalla */                         
+      1670     /* Ajuste de velocidad del carrusel en móvil para mejor legibilidad */                                  
+      1690     /* adaptado del movil a la solucion */                                                                  
+      1700     /* responsive de la seccion "beneficios" */                                                             
+      1725     /* El wrapper interno ya no necesita ser sticky en móvil */                                             
+      1731     /* rESPONSIVE DE LA SECCION DE EL PROCESO*/                                                             
+      1765     /* Responsive de la seccion de los servicios*/                                                          
+      1779     /* Responsive de la seccion de planes */                                                                
+      1789     /* responsive del faq*/                                                                                 
+      1795     /* Responsive del CTA */                                                                                
+      1813     /* responsive del footer */                                                                             
+      1823 /*                                                                                                          
+
+
