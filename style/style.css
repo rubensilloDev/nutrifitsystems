@@ -67,12 +67,14 @@ body {
     color: var(--clr-text);
 }
 
+
 body,
 html {
     overflow-x: clip;
+    /* clip para que no se desborde por los lados las cosas (como el hidden), pero el clip no rompe los sticky*/
 }
 
-/* estilos cuando se selecciona algo para copiar o pegar*/
+/* estilos cuando se selecciona algo para copiar */
 ::selection {
     background-color: var(--clr-accent-soft);
     color: var(--clr-text);
@@ -105,6 +107,9 @@ li {
 
 a {
     font-size: var(--fs-p);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
 }
 
 span {
@@ -119,13 +124,6 @@ h4 {
     font-weight: 800;
 }
 
-/* Estilos básicos para enlaces */
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: var(--transition-fast);
-}
-
 /* Quitar puntos de las listas */
 ul {
     list-style: none;
@@ -137,12 +135,12 @@ img {
     display: block;
 }
 
-/* COMPONENTES REUTILIZABLES */
-
 /* estilos a los contenedores que van a tener el fondo diferente*/
 .container-alternos {
     background-color: var(--clr-bg-sec);
 }
+
+/* COMPONENTES REUTILIZABLES */
 
 /* Estilo base para todos los botones del sitio */
 .btn-primario,
@@ -154,7 +152,7 @@ img {
     display: inline-block;
     cursor: pointer;
     font-family: var(--ff-body);
-    border: 0.125em solid transparent;
+    border: 2px solid var(--clr-primary);
 }
 
 /* Botón principal (Verde sólido) */
@@ -168,7 +166,7 @@ img {
 /* Efecto hover del botón principal */
 .btn-primario:hover {
     background-color: var(--clr-primary-dark);
-    transform: translateY(-0.2rem);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -177,7 +175,6 @@ img {
     position: relative;
     font-size: var(--fs-a);
     color: var(--clr-primary);
-    border: 2px solid var(--clr-primary);
     background-color: transparent;
     transition: all 0.3s ease;
 }
@@ -189,14 +186,10 @@ img {
 }
 
 .btn-esquema {
-    border-color: var(--clr-primary);
-    color: var(--clr-primary);
-}
-
-/* Efecto hover del botón de esquema */
-.btn-esquema {
     position: relative;
     overflow: hidden;
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
 }
 
 /* efecto de que como que se rellena el boton por dentro*/
@@ -476,7 +469,6 @@ img {
 .container {
     max-width: 90%;
     margin: 0 auto;
-    padding: 0 5%;
 }
 
 /* Encabezado de sección común (Centrado) */
@@ -925,7 +917,6 @@ img {
 .btn-tab-servicio:not(.btn-activo):hover {
     background-color: var(--clr-primary);
     color: var(--clr-white);
-    border-color: var(--clr-secondary);
 }
 
 /* estilos al contenedor de las pestañas y la imagen */
@@ -1021,20 +1012,6 @@ img {
 
     100% {
         transform: translateX(0);
-    }
-}
-
-/* Animación de flotado vertical (Sube y baja suavemente) */
-@keyframes floatVertical {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-0.9375rem);
-        /* 15px */
     }
 }
 
@@ -1137,7 +1114,6 @@ img {
 
 .seccion-faq {
     padding: 4rem 0;
-    background-color: var(--clr-background-light);
 }
 
 /* estilo al contenedor que tiene todas las preguntas*/
@@ -1153,7 +1129,6 @@ img {
 .item-faq {
     background-color: white;
     padding: 2rem;
-    border-radius: var(--radius-lg);
     border: 1px solid var(--clr-accent-soft);
     transition: var(--transition-smooth);
 }
@@ -1221,7 +1196,6 @@ img {
     opacity: 0;
     height: 0;
     font-size: 1rem;
-    color: var(--clr-text-muted);
     line-height: 1.6;
     transition: all 0.3s ease;
 }
@@ -1240,7 +1214,7 @@ img {
 }
 
 .icono-faq-cerrar span:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 
@@ -1296,7 +1270,6 @@ img {
 
 .item-contacto p {
     word-break: break-all;
-    color: var(--clr-text-light);
     font-size: 0.95rem;
 }
 
@@ -1421,18 +1394,12 @@ img {
     color: var(--clr-accent-soft);
 }
 
-.enlaces-footer {
-    list-style: none;
-    padding: 0;
-}
-
 .enlaces-footer li {
     margin-bottom: 0.8rem;
 }
 
 .enlaces-footer a {
     color: white;
-    text-decoration: none;
     font-size: 0.9rem;
     opacity: 0.6;
     transition: var(--transition-fast);
@@ -1479,7 +1446,6 @@ img {
 
 .fecha-legal {
     font-size: 0.95rem;
-    color: var(--clr-text-light);
     opacity: 0.8;
 }
 
@@ -1501,11 +1467,11 @@ img {
 
 .texto-cuerpo-legal p {
     line-height: 1.8;
-    color: var(--clr-text-light);
     margin-bottom: 1.5rem;
 }
 
 .texto-cuerpo-legal ul {
+    list-style: disc;
     margin: 1.5rem 0;
     padding-left: 1.5rem;
 }
@@ -1513,50 +1479,20 @@ img {
 .texto-cuerpo-legal li {
     margin-bottom: 1rem;
     line-height: 1.6;
-    color: var(--clr-text-light);
 }
 
 .texto-cuerpo-legal strong {
     color: var(--clr-text);
 }
 
-/* ANIMACIONES */
-/* Animación de desplazamiento infinito de izquierda a derecha */
-@keyframes scrollForward {
-    0% {
-        transform: translateX(-50%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-/**/
-
-
 /* Ajustes responsivos para tablets */
 @media (max-width: 1200px) {
 
     :root {
-        --fs-h1: 3rem;
         --fs-h2: 2.2rem;
-        --fs-h3: 1.5rem;
         --fs-p: 1.05rem;
     }
 
-
-    .contenido-hero {
-        gap: var(--space-4);
-    }
-
-
-    /* 1. Reducimos el ancho máximo para que respire por los lados */
-    .container {
-        max-width: 90%;
-    }
-
-    /* 2. Las grillas de 3 columnas pasan a 2 columnas */
     .grid-problema {
         grid-template-columns: 1fr;
         gap: var(--space-3);
@@ -1695,11 +1631,6 @@ img {
         padding-top: var(--space-6);
     }
 
-
-    .hero-izquierdo {
-        max-width: 100%;
-    }
-
     .hero-derecho {
         max-width: 80%;
         margin: 0 auto;
@@ -1718,26 +1649,7 @@ img {
         display: block;
     }
 
-    /* Reajuste de tarjetas flotantes en móvil para que no se salgan de pantalla */
-    .flotante-abajo-izquierda,
-    .flotante-abajo-derecha {
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: fit-content;
-    }
-
-    .flotante-abajo-izquierda {
-        bottom: -1rem;
-        left: -60%;
-    }
-
-    .flotante-abajo-derecha {
-        top: 0;
-        right: -60%;
-    }
-
-    /* Ajuste de velocidad del carrusel en móvil para mejor legibilidad */
+    /* Ajuste de velocidad del carrusel en móvil */
     .pista-carrusel {
         animation-duration: 15s;
     }
@@ -1810,11 +1722,6 @@ img {
         align-items: center;
         flex-direction: column;
         justify-content: center;
-    }
-
-    .fila-invertida {
-        grid-template-columns: 1fr;
-
     }
 
     .fila-invertida .contenido-proceso {
@@ -1899,7 +1806,7 @@ img {
     }
 
     .texto-cta {
-        font-size: 1rem;
+        font-size: var(--fs-p);
         width: 95%;
     }
 
