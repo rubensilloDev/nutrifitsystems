@@ -79,27 +79,6 @@ preguntaHeader.forEach(pregunta => {
 
 
 
-
-// libreria para el scroll, sacada de: https://github.com/darkroomengineering/lenis/blob/main/README.md
-
-// Inicializamos Lenis
-const lenis = new Lenis({
-    duration: 1.5,   // Duración del scroll 
-    smoothWheel: true // Activa el scroll fluido 
-});
-
-// bucle de la libreria para que funcione en cada fotograma 
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-// activación del bucle
-requestAnimationFrame(raf);
-
-
-
-
-
 // libreria para poner animaciones de scroll de manera sencilla que la he sacado de: https://vabadus.es/blog/otros/anade-efectos-a-tu-web-con-la-libreria-aos
 // Inicializar AOS
 AOS.init({
